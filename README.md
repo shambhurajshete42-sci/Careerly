@@ -1,7 +1,7 @@
 # Careerly — AI-Powered Career Guidance System
 
 **Problem Statement:** ED-02 (AI-Powered Career Guidance System)  
-**Institution:** GH Raisoni International Skill Tech University, Pune  
+**Team:** Vidhata X  
 **Team Members:**  
 - **Abhijeet Raut** — Full Stack & AI Architect  
 - **Shambhuraj Shete** — UI/UX & Product Engineer  

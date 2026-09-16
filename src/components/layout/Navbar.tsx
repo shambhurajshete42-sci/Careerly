@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, ArrowRight, Compass, GraduationCap, Award } from 'lucide-react';
+import { Sparkles, ArrowRight, Compass, Users, Award } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { HACKATHON_METADATA } from '../../data/sampleData';
 
@@ -8,7 +8,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-40 w-full bg-white/90 backdrop-blur-md border-b border-purple-100 transition-all">
-      {/* Top institution hackathon bar */}
+      {/* Top hackathon bar */}
       <div className="bg-gradient-to-r from-brand-900 via-brand-800 to-brand-900 text-white text-[11px] py-1.5 px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
           <div className="flex items-center gap-2 font-medium">
@@ -16,13 +16,13 @@ export const Navbar: React.FC = () => {
               Problem Statement {HACKATHON_METADATA.problemStatementId}
             </span>
             <span className="hidden sm:inline text-purple-200">|</span>
-            <span className="flex items-center gap-1 text-purple-100">
-              <GraduationCap className="w-3.5 h-3.5 text-purple-300" />
-              {HACKATHON_METADATA.institution}
+            <span className="flex items-center gap-1.5 text-purple-100 font-semibold">
+              <Users className="w-3.5 h-3.5 text-purple-300" />
+              Team {HACKATHON_METADATA.teamName}
             </span>
           </div>
           <div className="flex items-center gap-3 text-purple-200 text-[10px] sm:text-[11px]">
-            <span className="hidden md:inline font-normal">Team: Abhijeet Raut &amp; Shambhuraj Shete</span>
+            <span className="hidden md:inline font-normal text-purple-200">Abhijeet Raut &amp; Shambhuraj Shete</span>
             <span className="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full font-semibold border border-emerald-400/30 flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
               Live Prototype

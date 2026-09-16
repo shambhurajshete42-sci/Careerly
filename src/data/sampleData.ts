@@ -14,6 +14,7 @@ export const HACKATHON_METADATA = {
   subheading: "AI-powered career guidance that connects what you're good at with where the market is heading.",
   problemStatementId: 'ED-02',
   problemStatementTitle: 'AI-Powered Career Guidance System',
+  teamName: 'Vidhata X',
   institution: 'GH Raisoni International Skill Tech University, Pune',
   teamMembers: [
     { name: 'Abhijeet Raut', role: 'Full Stack & AI Architect' },

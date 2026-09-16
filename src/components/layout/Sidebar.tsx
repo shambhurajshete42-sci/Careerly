@@ -249,7 +249,7 @@ export const Sidebar: React.FC = () => {
           </button>
 
           <div className="pt-2 px-2 text-[10px] text-slate-400 leading-tight">
-            <p className="font-semibold text-slate-500">{HACKATHON_METADATA.institution}</p>
+            <p className="font-semibold text-slate-600">Team {HACKATHON_METADATA.teamName}</p>
             <p className="text-[9px] text-slate-400 mt-0.5">Problem Statement: {HACKATHON_METADATA.problemStatementId}</p>
           </div>
         </div>
@@ -269,11 +269,7 @@ export const Sidebar: React.FC = () => {
                 <p className="text-brand-900 font-semibold">{HACKATHON_METADATA.problemStatementId} — {HACKATHON_METADATA.problemStatementTitle}</p>
               </div>
               <div className="p-3 bg-slate-50 rounded-xl">
-                <span className="font-bold text-slate-800 block mb-0.5">Institution:</span>
-                <p>{HACKATHON_METADATA.institution}</p>
-              </div>
-              <div className="p-3 bg-slate-50 rounded-xl">
-                <span className="font-bold text-slate-800 block mb-1">Team Members:</span>
+                <span className="font-bold text-slate-800 block mb-1">Team: {HACKATHON_METADATA.teamName}</span>
                 <ul className="space-y-1 font-medium text-slate-700">
                   {HACKATHON_METADATA.teamMembers.map(m => (
                     <li key={m.name} className="flex items-center justify-between">

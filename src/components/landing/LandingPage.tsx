@@ -101,8 +101,8 @@ export const LandingPage: React.FC = () => {
                   Problem Statement: <strong>{HACKATHON_METADATA.problemStatementId}</strong>
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <GraduationCap className="w-4 h-4 text-brand-600" />
-                  GH Raisoni International Skill Tech University
+                  <Award className="w-4 h-4 text-brand-600" />
+                  Team: <strong>{HACKATHON_METADATA.teamName}</strong>
                 </span>
               </div>
             </div>
@@ -312,7 +312,7 @@ export const LandingPage: React.FC = () => {
           </div>
 
           <div className="text-center sm:text-right text-[11px] text-slate-400">
-            <p>GH Raisoni International Skill Tech University, Pune</p>
+            <p className="font-semibold text-slate-600">Team {HACKATHON_METADATA.teamName}</p>
             <p className="text-slate-500 font-medium">Developed by Abhijeet Raut &amp; Shambhuraj Shete</p>
           </div>
         </div>

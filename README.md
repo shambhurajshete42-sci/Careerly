@@ -1,12 +1,13 @@
 # Careerly — AI-Powered Career Guidance System
 
+> 🚀 **Live Web Application (Deployed & Publicly Accessible):**  
+> ### **[https://shambhurajshete42-sci.github.io/Careerly/](https://shambhurajshete42-sci.github.io/Careerly/)**
+
 **Problem Statement:** ED-02 (AI-Powered Career Guidance System)  
 **Team:** Careerly Core Team  
 **Team Members:**  
 - **Abhijeet Raut** — Full Stack & AI Architect  
 - **Shambhuraj Shete** — UI/UX & Product Engineer  
-
-🌐 **Live Web Application:** [https://shambhurajshete42-sci.github.io/Careerly/](https://shambhurajshete42-sci.github.io/Careerly/)
 
 ---
 
@@ -17,6 +18,7 @@ An AI-powered career guidance system for students based on:
 - **Career Aspirations & 3–5 Year Horizon**
 - **Current Real-Time Tech Market & Hiring Trends**
 - **Student-Driven Career Goal Planning** ("I want to become a Data Scientist")
+- **"Future Purple + Growth" Visual Design System** (Warm beige, deep purple, sage green, and soft lavender)
 
 Careerly helps students discover suitable career paths, choose dream career goals, diagnose skill gaps, and follow a personalized step-by-step 5-phase learning roadmap towards placement.
 
@@ -29,8 +31,9 @@ Careerly helps students discover suitable career paths, choose dream career goal
    - Comprehensive breakdowns: Core Skills, Technical Skills, Tools & Technologies, Soft Skills, Education & Knowledge, Experience, Portfolio Projects with difficulty levels, and Optional Certifications.
    - Personalized Skill Readiness: Compares student's live profile skills against role benchmarks (Strong foundation ✓, Skill to develop ⚠, Priority area 🔴).
    - "Your Next Steps": Top 3-5 prioritized recommendations linking directly to learning and roadmaps.
-2. **Landing Page & Guidance Visualization**:
-   - Modern EdTech visual identity in deep purple & lavender with minimal aesthetics.
+2. **"Future Purple + Growth" Visual Design Direction**:
+   - Palette: Primary Purple (`#5B3FD6`), Soft Lavender (`#F0ECFF`), Warm Beige (`#F7F3EA`), Sage Green (`#6FAF8B`), Soft Mint (`#E4F3EA`), and Charcoal Text (`#292631`).
+   - Replaced dark navy styling with an optimistic, student-friendly warm aesthetic with purple guidance CTAs and sage growth milestones.
    - Interactive flow visual: `Student Profile → AI Analysis → Career Match → Skill Gap → Personalized Roadmap`.
 3. **5-Step Onboarding Assessment**:
    - `01 Profile` (Name, Degree, Year of study)

@@ -5,6 +5,7 @@ import { Sidebar } from './components/layout/Sidebar';
 import { LandingPage } from './components/landing/LandingPage';
 import { OnboardingFlow } from './components/onboarding/OnboardingFlow';
 import { DashboardView } from './components/dashboard/DashboardView';
+import { CareerGoalPlannerView } from './components/planner/CareerGoalPlannerView';
 import { CareerExplorerView } from './components/careers/CareerExplorerView';
 import { CareerDetailView } from './components/careers/CareerDetailView';
 import { SkillGapView } from './components/skills/SkillGapView';
@@ -53,6 +54,7 @@ export const AppContent: React.FC = () => {
         {/* View Routing */}
         <main className="flex-1 p-4 sm:p-6 lg:p-8 max-w-5xl overflow-hidden">
           {currentView === 'dashboard' && <DashboardView />}
+          {currentView === 'career-goal-planner' && <CareerGoalPlannerView />}
           {currentView === 'career-explorer' && <CareerExplorerView />}
           {currentView === 'career-detail' && <CareerDetailView />}
           {currentView === 'skill-gap' && <SkillGapView />}

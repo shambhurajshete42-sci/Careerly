@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { 
   LayoutDashboard, 
+  Target,
   Compass, 
   SplitSquareVertical, 
   Milestone, 
@@ -33,6 +34,7 @@ export const Sidebar: React.FC = () => {
 
   const navItems: { view: AppView; label: string; icon: React.FC<{ className?: string }> }[] = [
     { view: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
+    { view: 'career-goal-planner', label: 'Career Goal Planner', icon: Target },
     { view: 'career-explorer', label: 'Career Explorer', icon: Compass },
     { view: 'skill-gap', label: 'Skill Gap', icon: SplitSquareVertical },
     { view: 'roadmap', label: 'Roadmap', icon: Milestone },
@@ -201,6 +203,11 @@ export const Sidebar: React.FC = () => {
                     <Icon className={`w-4 h-4 transition-colors ${isActive ? 'text-white' : 'text-slate-400 group-hover:text-brand-700'}`} />
                     <span>{item.label}</span>
                   </div>
+                  {item.view === 'career-goal-planner' && (
+                    <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${isActive ? 'bg-brand-700 text-purple-100' : 'bg-brand-100 text-brand-800'}`}>
+                      Planner
+                    </span>
+                  )}
                   {item.view === 'roadmap' && (
                     <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${isActive ? 'bg-brand-700 text-purple-100' : 'bg-lavender-100 text-brand-700'}`}>
                       5 Phases

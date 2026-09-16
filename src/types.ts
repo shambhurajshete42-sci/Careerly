@@ -110,6 +110,7 @@ export type AppView =
   | 'landing' 
   | 'onboarding' 
   | 'dashboard' 
+  | 'career-goal-planner'
   | 'career-explorer' 
   | 'career-detail' 
   | 'skill-gap' 
@@ -117,3 +118,65 @@ export type AppView =
   | 'market-trends' 
   | 'learning' 
   | 'profile';
+
+export interface PortfolioProject {
+  title: string;
+  description: string;
+  skillsPracticed: string[];
+  difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
+}
+
+export interface OptionalCertification {
+  title: string;
+  provider: string;
+  type: string;
+  note: string;
+}
+
+export interface CareerGoalRequirementSkill {
+  name: string;
+  targetPercentage: number;
+  category: 'Core' | 'Technical' | 'Tools' | 'Soft Skills';
+  importance: 'Critical' | 'High' | 'Recommended';
+  recommendedLearning: string;
+}
+
+export interface NextActionStep {
+  stepNumber: string;
+  title: string;
+  description: string;
+  actionLabel?: string;
+  actionView?: AppView;
+}
+
+export interface CareerGoalItem {
+  id: string;
+  title: string;
+  shortDescription: string;
+  category: 'Engineering & AI' | 'Data & Analytics' | 'Design & Product' | 'Cloud & Security' | 'Business & Leadership';
+  iconName: string;
+  overview: string;
+  marketOutlook: string;
+  salaryRange: string;
+  coreSkills: string[];
+  technicalSkills: string[];
+  toolsAndTechnologies: string[];
+  softSkills: string[];
+  educationAndKnowledge: string[];
+  experience: string[];
+  portfolioProjects: PortfolioProject[];
+  optionalCertifications: OptionalCertification[];
+  requiredSkills: CareerGoalRequirementSkill[];
+  nextSteps: NextActionStep[];
+}
+
+export interface SkillReadinessComparison {
+  name: string;
+  currentPercentage: number;
+  targetPercentage: number;
+  status: 'Strong' | 'Developing' | 'Priority';
+  feedbackBadge: 'Strong foundation' | 'Skill to develop' | 'Priority area';
+  category: string;
+  importance: 'Critical' | 'High' | 'Recommended';
+}
+

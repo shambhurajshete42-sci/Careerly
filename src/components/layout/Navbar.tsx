@@ -74,6 +74,12 @@ export const Navbar: React.FC = () => {
             How It Works
           </button>
           <button 
+            onClick={() => navigateTo('career-goal-planner')} 
+            className={`hover:text-brand-700 transition-colors ${currentView === 'career-goal-planner' ? 'text-brand-800 font-semibold' : ''}`}
+          >
+            Goal Planner
+          </button>
+          <button 
             onClick={() => navigateTo('career-explorer')} 
             className={`hover:text-brand-700 transition-colors ${currentView === 'career-explorer' ? 'text-brand-800 font-semibold' : ''}`}
           >

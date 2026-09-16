@@ -21,6 +21,8 @@ interface AppContextType {
   activeTargetCareer: CareerPath;
   currentView: AppView;
   selectedCareerId: string;
+  selectedGoalCareerId: string;
+  setSelectedGoalCareerId: (id: string) => void;
   roadmapPhases: RoadmapPhase[];
   learningResources: LearningResource[];
   isAssistantOpen: boolean;
@@ -47,6 +49,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const [currentView, setCurrentView] = useState<AppView>('landing');
   const [selectedCareerId, setSelectedCareerId] = useState<string>('ai-ml-engineer');
+  const [selectedGoalCareerId, setSelectedGoalCareerId] = useState<string>('ai-ml-engineer');
   const [roadmapPhases, setRoadmapPhases] = useState<RoadmapPhase[]>(() => {
     const saved = localStorage.getItem('careerly_roadmap_phases');
     return saved ? JSON.parse(saved) : INITIAL_ROADMAP_PHASES;
@@ -84,6 +87,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const navigateTo = (view: AppView, careerId?: string) => {
     if (careerId) {
       setSelectedCareerId(careerId);
+      setSelectedGoalCareerId(careerId);
     }
     setCurrentView(view);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -173,6 +177,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         activeTargetCareer,
         currentView,
         selectedCareerId,
+        selectedGoalCareerId,
+        setSelectedGoalCareerId,
         roadmapPhases,
         learningResources,
         isAssistantOpen,

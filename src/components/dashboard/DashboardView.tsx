@@ -11,7 +11,8 @@ import {
   AlertCircle,
   ExternalLink,
   Bot,
-  Zap
+  Zap,
+  Target
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { CircularProgress } from '../common/CircularProgress';
@@ -181,6 +182,34 @@ export const DashboardView: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Career Goal Planner Banner */}
+      <div className="p-4 sm:p-5 rounded-3xl bg-gradient-to-r from-brand-900 via-purple-900 to-brand-800 text-white shadow-card flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="flex items-center gap-3.5">
+          <div className="w-11 h-11 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center text-purple-200 shrink-0">
+            <Target className="w-5 h-5" />
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-purple-300">Feature</span>
+              <span className="text-[10px] bg-brand-500/30 text-purple-200 px-2 py-0.5 rounded-full font-semibold border border-purple-400/30">Career Goal Planner</span>
+            </div>
+            <h3 className="text-sm sm:text-base font-bold text-white mt-0.5">
+              Have a specific dream career in mind?
+            </h3>
+            <p className="text-xs text-purple-200">
+              Say "I want to become a Data Scientist" or any of 10+ roles to see exact skill benchmarks, gaps, and roadmaps.
+            </p>
+          </div>
+        </div>
+        <button
+          onClick={() => navigateTo('career-goal-planner')}
+          className="px-4 py-2 rounded-xl bg-white text-brand-900 hover:bg-purple-50 text-xs font-bold transition-all shrink-0 flex items-center justify-center gap-1.5 shadow-sm"
+        >
+          <span>Open Goal Planner</span>
+          <ArrowRight className="w-3.5 h-3.5" />
+        </button>
       </div>
 
       {/* Alternative Career Paths Section */}

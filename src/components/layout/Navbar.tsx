@@ -22,7 +22,6 @@ export const Navbar: React.FC = () => {
             </span>
           </div>
           <div className="flex items-center gap-3 text-purple-200 text-[10px] sm:text-[11px]">
-            <span className="hidden md:inline font-normal text-purple-200">Abhijeet Raut &amp; Shambhuraj Shete</span>
             <span className="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full font-semibold border border-emerald-400/30 flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
               Live Prototype

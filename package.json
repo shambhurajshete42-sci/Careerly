@@ -2,6 +2,7 @@
   "name": "careerly",
   "private": true,
   "version": "1.0.0",
+  "homepage": "https://shambhurajshete42-sci.github.io/Careerly/",
   "type": "module",
   "scripts": {
     "dev": "vite",

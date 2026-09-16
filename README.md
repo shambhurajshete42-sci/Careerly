@@ -6,6 +6,8 @@
 - **Abhijeet Raut** — Full Stack & AI Architect  
 - **Shambhuraj Shete** — UI/UX & Product Engineer  
 
+🌐 **Live Network Link:** [http://192.168.1.51:5173/](http://192.168.1.51:5173/)
+
 ---
 
 ## 🎯 Core Idea
@@ -73,7 +75,7 @@ npm install
 # Start development server
 npm run dev
 ```
-Open [http://localhost:5173](http://localhost:5173) in your browser to test the live prototype.
+Open [http://192.168.1.51:5173/](http://192.168.1.51:5173/) in your browser to test the live prototype across your local network.
 
 ### Production Build
 ```bash

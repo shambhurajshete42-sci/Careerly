@@ -163,23 +163,27 @@ export const CareerGoalPlannerView: React.FC = () => {
         </div>
 
         {/* Informative Banner */}
-        <div className="p-4 sm:p-5 rounded-3xl bg-gradient-to-r from-brand-900 via-brand-800 to-brand-900 text-white shadow-card relative overflow-hidden">
-          <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="p-5 sm:p-6 rounded-3xl bg-[#F0ECFF] border border-[#DDD5FF] shadow-sm relative overflow-hidden">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="max-w-xl">
-              <span className="text-[10px] uppercase tracking-widest font-bold text-purple-300">
+              <span className="text-[10px] uppercase tracking-widest font-bold text-[#5B3FD6] bg-white px-2.5 py-1 rounded-full border border-[#DDD5FF] inline-block mb-1.5">
                 Student-Led Career Pathing
               </span>
-              <h2 className="text-lg sm:text-xl font-extrabold text-white mt-0.5">
+              <h2 className="text-xl sm:text-2xl font-black text-[#292631]">
                 "I want to become a..."
               </h2>
-              <p className="text-xs sm:text-sm text-purple-100 mt-1 leading-relaxed">
+              <p className="text-xs sm:text-sm text-charcoal-200 mt-1 leading-relaxed">
                 Choose any target role you aspire to. Careerly analyzes your current skills against industry benchmarks, identifies gaps, and maps out projects and roadmaps to get you hired.
               </p>
             </div>
-            <div className="shrink-0 bg-white/10 backdrop-blur-md rounded-2xl p-3.5 border border-white/15 text-center sm:text-right">
-              <span className="text-xs text-purple-200 block font-medium">Currently Selected Target:</span>
-              <span className="text-sm font-black text-white block mt-0.5">
+            <div className="shrink-0 bg-white rounded-2xl p-4 border border-[#DDD5FF] text-left sm:text-right shadow-subtle">
+              <span className="text-xs text-charcoal-100 block font-medium">Currently Selected Target:</span>
+              <span className="text-sm font-extrabold text-[#5B3FD6] block mt-0.5">
                 {CAREER_GOALS.find(c => c.id === student.targetCareerId)?.title || 'AI / Machine Learning Engineer'}
+              </span>
+              <span className="inline-flex items-center gap-1 text-[10px] font-bold text-[#36644B] bg-[#E4F3EA] px-2 py-0.5 rounded-full mt-1.5 border border-[#CEE8D8]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#6FAF8B]"></span>
+                In Progress
               </span>
             </div>
           </div>
@@ -983,12 +987,16 @@ export const CareerGoalPlannerView: React.FC = () => {
       </div>
 
       {/* Bottom CTA Banner linking to Roadmap & Skill Gap */}
-      <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-brand-900 to-brand-800 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-card">
+      <div className="p-6 sm:p-8 rounded-3xl bg-[#5B3FD6] text-white flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-card">
         <div className="space-y-1 max-w-xl">
-          <h3 className="text-lg sm:text-xl font-bold text-white">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/15 text-purple-100 text-[11px] font-semibold border border-white/20 mb-1">
+            <Sparkles className="w-3 h-3 text-purple-200" />
+            <span>Growth Milestone</span>
+          </div>
+          <h3 className="text-lg sm:text-2xl font-bold text-white">
             Ready to build toward becoming a {currentCareerGoal.title}?
           </h3>
-          <p className="text-xs sm:text-sm text-purple-200 leading-relaxed">
+          <p className="text-xs sm:text-sm text-purple-100 leading-relaxed">
             Follow your personalized 5-phase career roadmap with step-by-step milestones, vetted learning courses, and practice challenges.
           </p>
         </div>
@@ -998,7 +1006,7 @@ export const CareerGoalPlannerView: React.FC = () => {
               handleSetAsTarget(currentCareerGoal.id);
               navigateTo('roadmap');
             }}
-            className="px-5 py-3 rounded-2xl bg-white text-brand-900 hover:bg-purple-50 text-xs sm:text-sm font-bold shadow-lg transition-all active:scale-95 flex items-center gap-2"
+            className="px-5 py-3 rounded-2xl bg-white text-[#5B3FD6] hover:bg-[#FAF8FF] text-xs sm:text-sm font-bold shadow-md transition-all active:scale-95 flex items-center gap-2"
           >
             <span>View 5-Phase Roadmap</span>
             <ArrowRight className="w-4 h-4" />

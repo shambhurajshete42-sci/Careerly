@@ -44,33 +44,33 @@ export const LandingPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#faf9fd] flex flex-col">
+    <div className="min-h-screen bg-[#F7F3EA] flex flex-col">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28">
-        {/* Subtle background glow circles */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-purple-100/60 to-transparent pointer-events-none -z-10 rounded-full blur-3xl opacity-70" />
+        {/* Subtle warm lavender & mint ambient glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-[#F0ECFF]/80 to-transparent pointer-events-none -z-10 rounded-full blur-3xl opacity-80" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               {/* Pill badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-lavender-100/90 border border-brand-200/80 text-brand-900 text-xs font-semibold tracking-wide shadow-subtle">
-                <Sparkles className="w-3.5 h-3.5 text-brand-600 animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F0ECFF] border border-[#DDD5FF] text-[#5B3FD6] text-xs font-semibold tracking-wide shadow-subtle">
+                <Sparkles className="w-3.5 h-3.5 text-[#5B3FD6] animate-pulse" />
                 <span>Next-Gen Career Intelligence for Students</span>
               </div>
 
               {/* Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#292631] tracking-tight leading-[1.12]">
                 Your Skills. <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-800 via-brand-600 to-purple-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5B3FD6] to-[#7B57FF]">
                   Your Interests.
                 </span> <br />
                 Your Future.
               </h1>
 
               {/* Subheading */}
-              <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+              <p className="text-base sm:text-lg text-charcoal-200 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
                 AI-powered career guidance that connects what you're good at with where the market is heading. Stop guessing career paths and start building with personalized intelligence.
               </p>
 
@@ -78,30 +78,29 @@ export const LandingPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
                 <button
                   onClick={() => navigateTo('onboarding')}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-xl bg-brand-800 hover:bg-brand-900 text-white font-bold text-sm sm:text-base shadow-lg shadow-brand-900/20 hover:shadow-brand-900/30 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-xl bg-[#5B3FD6] hover:bg-[#4E34BF] text-white font-bold text-sm sm:text-base shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5 active:translate-y-0"
                 >
                   <span>Discover My Career</span>
-                  <ArrowRight className="w-5 h-5 text-purple-200" />
+                  <ArrowRight className="w-5 h-5 text-white" />
                 </button>
 
                 <button
-                  onClick={() => {
-                    document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-lavender-50 text-slate-700 hover:text-brand-800 font-semibold text-sm sm:text-base border border-purple-100 shadow-sm transition-all"
+                  onClick={() => navigateTo('career-goal-planner')}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-[#F0ECFF] text-[#5B3FD6] font-bold text-sm sm:text-base border border-[#DDD5FF] shadow-sm transition-all"
                 >
-                  <span>See How It Works</span>
+                  <Target className="w-4 h-4 text-[#5B3FD6]" />
+                  <span>Choose Career Goal</span>
                 </button>
               </div>
 
               {/* Quick Trust / Hackathon Metadata */}
-              <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 text-xs text-slate-500">
+              <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 text-xs text-charcoal-100">
                 <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                  <CheckCircle2 className="w-4 h-4 text-[#6FAF8B]" />
                   Problem Statement: <strong>{HACKATHON_METADATA.problemStatementId}</strong>
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <Award className="w-4 h-4 text-brand-600" />
+                  <Award className="w-4 h-4 text-[#5B3FD6]" />
                   Team: <strong>{HACKATHON_METADATA.teamName}</strong>
                 </span>
               </div>
@@ -272,27 +271,27 @@ export const LandingPage: React.FC = () => {
       </section>
 
       {/* Interactive Teaser Banner */}
-      <section className="py-16 bg-gradient-to-br from-brand-950 via-brand-900 to-purple-950 text-white relative overflow-hidden">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
-          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-brand-500/20 text-purple-200 border border-purple-400/30">
+      <section className="py-14 my-8 mx-4 sm:mx-8 rounded-3xl bg-[#5B3FD6] text-white relative overflow-hidden shadow-card">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-5">
+          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-white/15 text-purple-100 border border-white/20">
             Hackathon Showcase • ED-02
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
             Ready to explore your personalized career intelligence?
           </h2>
-          <p className="text-sm sm:text-base text-purple-200 max-w-xl mx-auto font-light">
+          <p className="text-xs sm:text-base text-purple-100 max-w-xl mx-auto font-light leading-relaxed">
             Take the 2-minute student assessment or jump straight into the live interactive dashboard preloaded with demo data.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <button
               onClick={() => navigateTo('onboarding')}
-              className="px-7 py-3 rounded-xl bg-white text-brand-950 font-bold text-sm shadow-md hover:bg-purple-50 transition-all hover:scale-105"
+              className="px-7 py-3 rounded-xl bg-white text-[#5B3FD6] font-bold text-sm shadow-md hover:bg-purple-50 transition-all hover:scale-105 active:scale-95"
             >
               Start 5-Step Assessment
             </button>
             <button
               onClick={() => navigateTo('dashboard')}
-              className="px-7 py-3 rounded-xl bg-brand-800/80 hover:bg-brand-800 text-purple-100 font-semibold text-sm border border-purple-400/40 transition-all"
+              className="px-7 py-3 rounded-xl bg-white/15 hover:bg-white/25 text-white font-semibold text-sm border border-white/30 transition-all"
             >
               Enter Live Dashboard Directly
             </button>
@@ -301,19 +300,19 @@ export const LandingPage: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="mt-auto py-8 bg-white border-t border-purple-100 text-slate-500 text-xs">
+      <footer className="mt-auto py-8 bg-white border-t border-beige-200 text-charcoal-100 text-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md bg-brand-800 flex items-center justify-center text-white font-bold text-xs">
+            <div className="w-6 h-6 rounded-md bg-[#5B3FD6] flex items-center justify-center text-white font-bold text-xs">
               C
             </div>
-            <span className="font-bold text-slate-800">Careerly</span>
-            <span className="text-slate-400">— AI-Powered Career Guidance System</span>
+            <span className="font-bold text-[#292631]">Careerly</span>
+            <span className="text-charcoal-50">— AI-Powered Career Guidance System</span>
           </div>
 
-          <div className="text-center sm:text-right text-[11px] text-slate-400">
-            <p className="font-semibold text-slate-600">Team {HACKATHON_METADATA.teamName}</p>
-            <p className="text-slate-500 font-medium">Developed by Abhijeet Raut &amp; Shambhuraj Shete</p>
+          <div className="text-center sm:text-right text-[11px] text-charcoal-50">
+            <p className="font-semibold text-charcoal-200">Team {HACKATHON_METADATA.teamName}</p>
+            <p className="text-charcoal-100 font-medium">Developed by Abhijeet Raut &amp; Shambhuraj Shete</p>
           </div>
         </div>
       </footer>

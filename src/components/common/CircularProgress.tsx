@@ -15,7 +15,7 @@ export const CircularProgress: React.FC<CircularProgressProps> = ({
   strokeWidth = 12,
   label,
   sublabel,
-  color = '#7e22ce' // brand-700
+  color = '#5B3FD6' // Primary Purple #5B3FD6
 }) => {
   const radius = (size - strokeWidth) / 2;
   const circumference = radius * 2 * Math.PI;
@@ -29,7 +29,7 @@ export const CircularProgress: React.FC<CircularProgressProps> = ({
           cx={size / 2}
           cy={size / 2}
           r={radius}
-          stroke="#f3e8ff"
+          stroke="#F0ECFF"
           strokeWidth={strokeWidth}
           fill="transparent"
         />
@@ -49,11 +49,11 @@ export const CircularProgress: React.FC<CircularProgressProps> = ({
       </svg>
       {/* Center content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-        <span className="text-3xl font-bold tracking-tight text-slate-900">{percentage}%</span>
-        {label && <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-0.5">{label}</span>}
+        <span className="text-3xl font-black tracking-tight text-[#292631]">{percentage}%</span>
+        {label && <span className="text-xs font-semibold text-charcoal-100 uppercase tracking-wider mt-0.5">{label}</span>}
       </div>
       {sublabel && (
-        <span className="mt-2 text-xs text-slate-500 font-medium text-center">{sublabel}</span>
+        <span className="mt-2 text-xs text-charcoal-100 font-medium text-center">{sublabel}</span>
       )}
     </div>
   );

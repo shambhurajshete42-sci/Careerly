@@ -7,23 +7,23 @@ export const Navbar: React.FC = () => {
   const { currentView, navigateTo } = useApp();
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-white/90 backdrop-blur-md border-b border-purple-100 transition-all">
-      {/* Top hackathon bar */}
-      <div className="bg-gradient-to-r from-brand-900 via-brand-800 to-brand-900 text-white text-[11px] py-1.5 px-4">
+    <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-beige-200 transition-all">
+      {/* Top bar with clean Primary Purple */}
+      <div className="bg-[#5B3FD6] text-white text-[11px] py-1.5 px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
           <div className="flex items-center gap-2 font-medium">
-            <span className="bg-brand-500/30 text-brand-200 px-2 py-0.5 rounded text-[10px] font-bold tracking-wide uppercase border border-brand-400/30">
+            <span className="bg-white/15 text-white px-2 py-0.5 rounded text-[10px] font-bold tracking-wide uppercase border border-white/20">
               Problem Statement {HACKATHON_METADATA.problemStatementId}
             </span>
             <span className="hidden sm:inline text-purple-200">|</span>
-            <span className="flex items-center gap-1.5 text-purple-100 font-semibold">
-              <Users className="w-3.5 h-3.5 text-purple-300" />
+            <span className="flex items-center gap-1.5 text-white font-semibold">
+              <Users className="w-3.5 h-3.5 text-purple-200" />
               Team {HACKATHON_METADATA.teamName}
             </span>
           </div>
-          <div className="flex items-center gap-3 text-purple-200 text-[10px] sm:text-[11px]">
-            <span className="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full font-semibold border border-emerald-400/30 flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <div className="flex items-center gap-3 text-purple-100 text-[10px] sm:text-[11px]">
+            <span className="bg-[#E4F3EA] text-[#36644B] px-2 py-0.5 rounded-full font-semibold border border-[#CEE8D8] flex items-center gap-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#6FAF8B] animate-pulse"></span>
               Live Prototype
             </span>
           </div>
@@ -37,27 +37,27 @@ export const Navbar: React.FC = () => {
           onClick={() => navigateTo('landing')}
           className="flex items-center gap-2.5 cursor-pointer group"
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-700 to-brand-900 flex items-center justify-center text-white shadow-md shadow-brand-900/10 group-hover:scale-105 transition-transform">
-            <Compass className="w-5 h-5 text-purple-200" />
+          <div className="w-10 h-10 rounded-xl bg-[#5B3FD6] flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+            <Compass className="w-5 h-5 text-white" />
           </div>
           <div>
             <div className="flex items-center gap-1.5">
-              <span className="text-xl font-black tracking-tight text-slate-900 group-hover:text-brand-800 transition-colors">
+              <span className="text-xl font-black tracking-tight text-[#292631] group-hover:text-[#5B3FD6] transition-colors">
                 Careerly
               </span>
-              <span className="bg-brand-100 text-brand-800 text-[10px] font-bold px-1.5 py-0.5 rounded-md uppercase tracking-wider">
+              <span className="bg-[#F0ECFF] text-[#5B3FD6] text-[10px] font-bold px-1.5 py-0.5 rounded-md uppercase tracking-wider">
                 AI
               </span>
             </div>
-            <p className="text-[10px] font-medium text-slate-400 tracking-wide uppercase">Career Intelligence</p>
+            <p className="text-[10px] font-medium text-charcoal-50 tracking-wide uppercase">Career Intelligence</p>
           </div>
         </div>
 
         {/* Desktop Links */}
-        <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
+        <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-charcoal-100">
           <button 
             onClick={() => navigateTo('landing')} 
-            className={`hover:text-brand-700 transition-colors ${currentView === 'landing' ? 'text-brand-800 font-semibold' : ''}`}
+            className={`hover:text-[#5B3FD6] transition-colors ${currentView === 'landing' ? 'text-[#5B3FD6] font-bold' : ''}`}
           >
             Home
           </button>
@@ -105,13 +105,13 @@ export const Navbar: React.FC = () => {
             <>
               <button 
                 onClick={() => navigateTo('dashboard')}
-                className="hidden sm:inline-flex text-xs font-semibold text-brand-700 hover:text-brand-900 px-3 py-2 rounded-lg hover:bg-brand-50 transition-colors"
+                className="hidden sm:inline-flex text-xs font-semibold text-[#5B3FD6] hover:text-[#4E34BF] px-3 py-2 rounded-xl hover:bg-[#F0ECFF] transition-colors"
               >
                 Demo Dashboard
               </button>
               <button
                 onClick={() => navigateTo('onboarding')}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-800 hover:bg-brand-900 text-white text-xs sm:text-sm font-semibold shadow-md shadow-brand-900/15 hover:shadow-brand-900/25 transition-all active:scale-95"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#5B3FD6] hover:bg-[#4E34BF] text-white text-xs sm:text-sm font-semibold shadow-sm transition-all active:scale-95"
               >
                 <span>Get Started</span>
                 <ArrowRight className="w-4 h-4" />
@@ -121,15 +121,15 @@ export const Navbar: React.FC = () => {
             <div className="flex items-center gap-2">
               <button
                 onClick={() => navigateTo('landing')}
-                className="text-xs font-semibold text-slate-500 hover:text-slate-900 px-3 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition-colors"
+                className="text-xs font-semibold text-charcoal-100 hover:text-charcoal px-3 py-1.5 rounded-xl border border-beige-300 hover:bg-white transition-colors"
               >
                 View Landing Page
               </button>
               <button
                 onClick={() => navigateTo('onboarding')}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-50 text-brand-700 hover:bg-brand-100 text-xs font-semibold transition-colors"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F0ECFF] text-[#5B3FD6] hover:bg-lavender-200 text-xs font-semibold transition-colors"
               >
-                <Sparkles className="w-3.5 h-3.5 text-brand-600" />
+                <Sparkles className="w-3.5 h-3.5 text-[#5B3FD6]" />
                 <span>Re-run Assessment</span>
               </button>
             </div>

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-[#faf9fd] text-slate-800 antialiased font-sans;
+    @apply bg-[#F7F3EA] text-[#292631] antialiased font-sans selection:bg-[#F0ECFF] selection:text-[#5B3FD6];
   }
 }
 
@@ -19,14 +19,14 @@
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1edf7;
+  background: #F7F3EA;
 }
 ::-webkit-scrollbar-thumb {
-  background: #d8b4fe;
+  background: #DDD5FF;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #a855f7;
+  background: #5B3FD6;
 }
 
 /* Glass effect */

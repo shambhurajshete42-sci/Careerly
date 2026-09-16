@@ -154,14 +154,14 @@ export const OnboardingFlow: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#faf9fd] py-10 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#F7F3EA] py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         {/* Step Indicator Header (except on step 5) */}
         {currentStep < 5 && (
           <div className="mb-8">
             <div className="flex items-center justify-between relative">
               {/* Connecting Line */}
-              <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-lavender-200 -translate-y-1/2 -z-0" />
+              <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-[#F0ECFF] -translate-y-1/2 -z-0" />
               
               {stepsList.map((st, idx) => {
                 const stepNum = idx + 1;
@@ -173,16 +173,16 @@ export const OnboardingFlow: React.FC = () => {
                     <div
                       className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm transition-all duration-300 ${
                         isCurrent
-                          ? 'bg-brand-800 text-white ring-4 ring-purple-100 shadow-md scale-110'
+                          ? 'bg-[#5B3FD6] text-white ring-4 ring-[#F0ECFF] shadow-md scale-110'
                           : isPassed
-                          ? 'bg-emerald-500 text-white'
+                          ? 'bg-[#6FAF8B] text-white'
                           : 'bg-white text-slate-400 border border-slate-200'
                       }`}
                     >
                       {isPassed ? <Check className="w-4 h-4" /> : st.num}
                     </div>
                     <span className={`text-[11px] font-semibold mt-1.5 hidden sm:block ${
-                      isCurrent ? 'text-brand-900' : isPassed ? 'text-slate-600' : 'text-slate-400'
+                      isCurrent ? 'text-[#5B3FD6] font-bold' : isPassed ? 'text-slate-600' : 'text-slate-400'
                     }`}>
                       {st.title}
                     </span>
@@ -194,15 +194,15 @@ export const OnboardingFlow: React.FC = () => {
         )}
 
         {/* Step Card Container */}
-        <div className="bg-white rounded-3xl p-6 sm:p-10 shadow-card border border-purple-100 relative">
+        <div className="bg-white rounded-3xl p-6 sm:p-10 shadow-card border border-[#F0ECFF] relative">
           {/* STEP 1: Student Profile */}
           {currentStep === 1 && (
             <div className="space-y-6">
               <div>
-                <span className="text-xs font-bold text-brand-700 uppercase tracking-wider bg-brand-50 px-2.5 py-1 rounded-md">
+                <span className="text-xs font-bold text-[#5B3FD6] uppercase tracking-wider bg-[#F0ECFF] px-2.5 py-1 rounded-md">
                   Step 01 of 05
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#292631] mt-2">
                   Tell us about yourself
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-500 mt-1">
@@ -219,7 +219,7 @@ export const OnboardingFlow: React.FC = () => {
                     type="text"
                     value={name}
                     onChange={e => setName(e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-xl border border-purple-100 focus:border-brand-600 focus:ring-2 focus:ring-purple-100 outline-none text-sm text-slate-800 transition-all font-medium"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#5B3FD6] focus:ring-2 focus:ring-[#F0ECFF] outline-none text-sm text-[#292631] transition-all font-medium"
                     placeholder="e.g. Aarav Sharma"
                   />
                 </div>
@@ -231,7 +231,7 @@ export const OnboardingFlow: React.FC = () => {
                   <select
                     value={educationLevel}
                     onChange={e => setEducationLevel(e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-xl border border-purple-100 focus:border-brand-600 focus:ring-2 focus:ring-purple-100 outline-none text-sm text-slate-800 transition-all font-medium bg-white"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#5B3FD6] focus:ring-2 focus:ring-[#F0ECFF] outline-none text-sm text-[#292631] transition-all font-medium bg-white"
                   >
                     <option value="Undergraduate">Undergraduate (B.Tech / B.E / B.Sc)</option>
                     <option value="Postgraduate">Postgraduate (M.Tech / M.S / MBA)</option>
@@ -247,7 +247,7 @@ export const OnboardingFlow: React.FC = () => {
                     type="text"
                     value={degreeCourse}
                     onChange={e => setDegreeCourse(e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-xl border border-purple-100 focus:border-brand-600 focus:ring-2 focus:ring-purple-100 outline-none text-sm text-slate-800 transition-all font-medium"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#5B3FD6] focus:ring-2 focus:ring-[#F0ECFF] outline-none text-sm text-[#292631] transition-all font-medium"
                     placeholder="e.g. B.Tech Computer Science"
                   />
                 </div>
@@ -259,7 +259,7 @@ export const OnboardingFlow: React.FC = () => {
                   <select
                     value={yearOfStudy}
                     onChange={e => setYearOfStudy(e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-xl border border-purple-100 focus:border-brand-600 focus:ring-2 focus:ring-purple-100 outline-none text-sm text-slate-800 transition-all font-medium bg-white"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#5B3FD6] focus:ring-2 focus:ring-[#F0ECFF] outline-none text-sm text-[#292631] transition-all font-medium bg-white"
                   >
                     <option value="1st Year">1st Year</option>
                     <option value="2nd Year">2nd Year</option>
@@ -270,8 +270,8 @@ export const OnboardingFlow: React.FC = () => {
                 </div>
               </div>
 
-              <div className="p-4 rounded-2xl bg-lavender-50/70 border border-purple-100/80 flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-brand-100 text-brand-800 flex items-center justify-center font-bold text-xs shrink-0">
+              <div className="p-4 rounded-2xl bg-[#F0ECFF]/60 border border-[#5B3FD6]/20 flex items-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-[#F0ECFF] text-[#5B3FD6] flex items-center justify-center font-bold text-xs shrink-0">
                   💡
                 </div>
                 <p className="text-xs text-slate-600">
@@ -285,10 +285,10 @@ export const OnboardingFlow: React.FC = () => {
           {currentStep === 2 && (
             <div className="space-y-6">
               <div>
-                <span className="text-xs font-bold text-brand-700 uppercase tracking-wider bg-brand-50 px-2.5 py-1 rounded-md">
+                <span className="text-xs font-bold text-[#5B3FD6] uppercase tracking-wider bg-[#F0ECFF] px-2.5 py-1 rounded-md">
                   Step 02 of 05
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#292631] mt-2">
                   What domains excite you?
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-500 mt-1">
@@ -306,13 +306,13 @@ export const OnboardingFlow: React.FC = () => {
                       onClick={() => toggleInterest(interest)}
                       className={`p-3.5 rounded-2xl text-xs sm:text-sm font-semibold text-left transition-all border flex items-center justify-between ${
                         isSelected
-                          ? 'bg-brand-50 border-brand-500 text-brand-900 shadow-sm'
-                          : 'bg-white border-purple-100 text-slate-700 hover:border-purple-200 hover:bg-slate-50'
+                          ? 'bg-[#F0ECFF] border-[#5B3FD6] text-[#292631] shadow-xs'
+                          : 'bg-white border-slate-200 text-[#292631] hover:border-[#5B3FD6]/40 hover:bg-[#F0ECFF]/30'
                       }`}
                     >
                       <span>{interest}</span>
                       <div className={`w-4 h-4 rounded-full flex items-center justify-center text-[10px] ${
-                        isSelected ? 'bg-brand-800 text-white' : 'border border-slate-300'
+                        isSelected ? 'bg-[#5B3FD6] text-white' : 'border border-slate-300'
                       }`}>
                         {isSelected && <Check className="w-2.5 h-2.5" />}
                       </div>
@@ -331,10 +331,10 @@ export const OnboardingFlow: React.FC = () => {
           {currentStep === 3 && (
             <div className="space-y-6">
               <div>
-                <span className="text-xs font-bold text-brand-700 uppercase tracking-wider bg-brand-50 px-2.5 py-1 rounded-md">
+                <span className="text-xs font-bold text-[#5B3FD6] uppercase tracking-wider bg-[#F0ECFF] px-2.5 py-1 rounded-md">
                   Step 03 of 05
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#292631] mt-2">
                   Your Current Skills &amp; Proficiency
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-500 mt-1">
@@ -346,12 +346,12 @@ export const OnboardingFlow: React.FC = () => {
               <div className="space-y-3.5">
                 {skills.map(s => {
                   return (
-                    <div key={s.name} className="p-3.5 rounded-2xl bg-slate-50/80 border border-purple-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div key={s.name} className="p-3.5 rounded-2xl bg-[#F7F3EA]/70 border border-slate-200/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                       <div className="min-w-[160px]">
-                        <p className="text-sm font-bold text-slate-900">{s.name}</p>
-                        <div className="w-32 bg-lavender-100 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                        <p className="text-sm font-bold text-[#292631]">{s.name}</p>
+                        <div className="w-32 bg-[#F0ECFF] h-1.5 rounded-full mt-1.5 overflow-hidden">
                           <div
-                            className="bg-brand-700 h-full rounded-full transition-all duration-300"
+                            className="bg-[#5B3FD6] h-full rounded-full transition-all duration-300"
                             style={{ width: `${s.percentage}%` }}
                           />
                         </div>
@@ -368,8 +368,8 @@ export const OnboardingFlow: React.FC = () => {
                               onClick={() => handleSkillLevelChange(s.name, lvl)}
                               className={`px-3 py-1 text-xs font-semibold rounded-lg transition-all ${
                                 isActive
-                                  ? 'bg-brand-800 text-white shadow-sm'
-                                  : 'bg-white text-slate-600 border border-slate-200 hover:bg-lavender-50'
+                                  ? 'bg-[#5B3FD6] text-white shadow-xs'
+                                  : 'bg-white text-[#292631] border border-slate-200 hover:bg-[#F0ECFF]'
                               }`}
                             >
                               {lvl}
@@ -401,7 +401,7 @@ export const OnboardingFlow: React.FC = () => {
                       key={item.name}
                       type="button"
                       onClick={() => handleAddSkillFromList(item)}
-                      className="text-xs font-semibold px-2.5 py-1 bg-white border border-purple-200 text-brand-800 hover:bg-brand-50 rounded-lg transition-colors"
+                      className="text-xs font-semibold px-2.5 py-1 bg-white border border-[#5B3FD6]/30 text-[#5B3FD6] hover:bg-[#F0ECFF] rounded-lg transition-colors"
                     >
                       + {item.name}
                     </button>
@@ -415,10 +415,10 @@ export const OnboardingFlow: React.FC = () => {
           {currentStep === 4 && (
             <div className="space-y-6">
               <div>
-                <span className="text-xs font-bold text-brand-700 uppercase tracking-wider bg-brand-50 px-2.5 py-1 rounded-md">
+                <span className="text-xs font-bold text-[#5B3FD6] uppercase tracking-wider bg-[#F0ECFF] px-2.5 py-1 rounded-md">
                   Step 04 of 05
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#292631] mt-2">
                   What are you looking for?
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-500 mt-1">
@@ -436,13 +436,13 @@ export const OnboardingFlow: React.FC = () => {
                       onClick={() => toggleGoal(goal)}
                       className={`p-3.5 rounded-2xl text-xs sm:text-sm font-semibold text-left transition-all border flex items-center justify-between ${
                         isSelected
-                          ? 'bg-brand-50 border-brand-500 text-brand-900 shadow-sm'
-                          : 'bg-white border-purple-100 text-slate-700 hover:border-purple-200 hover:bg-slate-50'
+                          ? 'bg-[#F0ECFF] border-[#5B3FD6] text-[#292631] shadow-xs'
+                          : 'bg-white border-slate-200 text-[#292631] hover:border-[#5B3FD6]/40 hover:bg-[#F0ECFF]/30'
                       }`}
                     >
                       <span>{goal}</span>
                       <div className={`w-4 h-4 rounded-full flex items-center justify-center text-[10px] ${
-                        isSelected ? 'bg-brand-800 text-white' : 'border border-slate-300'
+                        isSelected ? 'bg-[#5B3FD6] text-white' : 'border border-slate-300'
                       }`}>
                         {isSelected && <Check className="w-2.5 h-2.5" />}
                       </div>
@@ -459,7 +459,7 @@ export const OnboardingFlow: React.FC = () => {
                   value={vision}
                   onChange={e => setVision(e.target.value)}
                   rows={3}
-                  className="w-full px-4 py-3 rounded-2xl border border-purple-100 focus:border-brand-600 focus:ring-2 focus:ring-purple-100 outline-none text-xs sm:text-sm text-slate-800 transition-all"
+                  className="w-full px-4 py-3 rounded-2xl border border-slate-200 focus:border-[#5B3FD6] focus:ring-2 focus:ring-[#F0ECFF] outline-none text-xs sm:text-sm text-[#292631] transition-all"
                   placeholder="e.g. Working as an AI/ML Engineer leading generative AI models in high impact tech products..."
                 />
               </div>
@@ -470,13 +470,13 @@ export const OnboardingFlow: React.FC = () => {
           {currentStep === 5 && (
             <div className="py-12 px-2 text-center space-y-8">
               <div className="relative inline-flex items-center justify-center">
-                <div className="w-24 h-24 rounded-3xl bg-brand-800 text-white flex items-center justify-center shadow-glow animate-pulse">
-                  <Cpu className="w-12 h-12 text-purple-200" />
+                <div className="w-24 h-24 rounded-3xl bg-[#5B3FD6] text-white flex items-center justify-center shadow-lg shadow-[#5B3FD6]/20 animate-pulse">
+                  <Cpu className="w-12 h-12 text-[#F0ECFF]" />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight">
+                <h3 className="text-2xl font-extrabold text-[#292631] tracking-tight">
                   Analyzing Your Career Intelligence
                 </h3>
                 <p className="text-sm text-slate-500 max-w-md mx-auto">
@@ -486,9 +486,9 @@ export const OnboardingFlow: React.FC = () => {
 
               {/* Progress bar */}
               <div className="max-w-md mx-auto">
-                <div className="w-full bg-lavender-100 h-2.5 rounded-full overflow-hidden mb-3">
+                <div className="w-full bg-[#F0ECFF] h-2.5 rounded-full overflow-hidden mb-3">
                   <div 
-                    className="bg-brand-700 h-full rounded-full transition-all duration-300 ease-out"
+                    className="bg-[#5B3FD6] h-full rounded-full transition-all duration-300 ease-out"
                     style={{ width: `${analysisProgress}%` }}
                   />
                 </div>
@@ -510,14 +510,14 @@ export const OnboardingFlow: React.FC = () => {
                       key={idx}
                       className={`p-3 rounded-xl border transition-all flex items-center gap-3 text-xs ${
                         isDone
-                          ? 'bg-emerald-50/70 border-emerald-200 text-emerald-900'
+                          ? 'bg-[#E4F3EA] border border-[#6FAF8B]/40 text-[#292631]'
                           : isCurrent
-                          ? 'bg-brand-50 border-brand-300 text-brand-900 font-semibold ring-2 ring-purple-100'
+                          ? 'bg-[#F0ECFF] border border-[#5B3FD6]/40 text-[#292631] font-semibold ring-2 ring-[#F0ECFF]'
                           : 'bg-slate-50/50 border-slate-100 text-slate-400'
                       }`}
                     >
                       <div className={`w-6 h-6 rounded-md flex items-center justify-center shrink-0 ${
-                        isDone ? 'bg-emerald-500 text-white' : isCurrent ? 'bg-brand-800 text-white' : 'bg-slate-200 text-slate-500'
+                        isDone ? 'bg-[#6FAF8B] text-white' : isCurrent ? 'bg-[#5B3FD6] text-white' : 'bg-slate-200 text-slate-500'
                       }`}>
                         {isDone ? <Check className="w-3.5 h-3.5" /> : <Icon className="w-3.5 h-3.5" />}
                       </div>
@@ -536,7 +536,7 @@ export const OnboardingFlow: React.FC = () => {
                 <button
                   type="button"
                   onClick={handleBack}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-50 text-xs sm:text-sm font-semibold transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-200 text-slate-600 hover:bg-[#F0ECFF] text-xs sm:text-sm font-semibold transition-colors"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   <span>Back</span>
@@ -554,7 +554,7 @@ export const OnboardingFlow: React.FC = () => {
               <button
                 type="button"
                 onClick={handleNext}
-                className="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-brand-800 hover:bg-brand-900 text-white text-xs sm:text-sm font-bold shadow-md shadow-brand-900/15 hover:shadow-brand-900/25 transition-all"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-[#5B3FD6] hover:bg-[#4b32b8] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#5B3FD6]/20 transition-all"
               >
                 <span>{currentStep === 4 ? 'Generate AI Analysis' : 'Next Step'}</span>
                 <ArrowRight className="w-4 h-4" />

@@ -21,7 +21,7 @@ export const AppContent: React.FC = () => {
   // Landing Page View
   if (currentView === 'landing') {
     return (
-      <div className="min-h-screen flex flex-col bg-[#faf9fd]">
+      <div className="min-h-screen flex flex-col bg-[#F7F3EA]">
         <Navbar />
         <main className="flex-1">
           <LandingPage />
@@ -34,7 +34,7 @@ export const AppContent: React.FC = () => {
   // Multi-step Onboarding View
   if (currentView === 'onboarding') {
     return (
-      <div className="min-h-screen flex flex-col bg-[#faf9fd]">
+      <div className="min-h-screen flex flex-col bg-[#F7F3EA]">
         <Navbar />
         <main className="flex-1">
           <OnboardingFlow />
@@ -45,7 +45,7 @@ export const AppContent: React.FC = () => {
 
   // Dashboard & Authenticated Prototype Views with Persistent Layout
   return (
-    <div className="min-h-screen flex flex-col bg-[#faf9fd]">
+    <div className="min-h-screen flex flex-col bg-[#F7F3EA]">
       <Navbar />
       <div className="flex-1 flex max-w-7xl w-full mx-auto">
         {/* Desktop Sidebar / Mobile Menu */}

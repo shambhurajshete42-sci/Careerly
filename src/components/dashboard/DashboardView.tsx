@@ -119,40 +119,40 @@ export const DashboardView: React.FC = () => {
               </h2>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-xs font-bold text-brand-800 bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
+              <span className="text-xs font-bold text-[#5B3FD6] bg-[#F0ECFF] px-3 py-1 rounded-full border border-[#DDD5FF]">
                 Primary Recommendation
               </span>
-              <span className="text-sm font-extrabold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+              <span className="text-sm font-extrabold text-[#36644B] bg-[#E4F3EA] px-3 py-1 rounded-full border border-[#CEE8D8]">
                 {primaryCareer.matchPercentage}% AI Match
               </span>
             </div>
           </div>
 
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-5">
+          <p className="text-xs sm:text-sm text-charcoal-200 leading-relaxed mb-5">
             {primaryCareer.description}
           </p>
 
           {/* Quick Skill Coverage Mini Bar */}
-          <div className="p-4 rounded-2xl bg-lavender-50/70 border border-purple-100/70 space-y-3 mb-5">
-            <div className="flex justify-between items-center text-xs font-semibold text-slate-700">
+          <div className="p-4 rounded-2xl bg-[#FAF7F0] border border-beige-200 space-y-3 mb-5">
+            <div className="flex justify-between items-center text-xs font-semibold text-charcoal">
               <span>Skill Alignment for this Role:</span>
-              <span className="text-brand-800">4 of 6 core domains ready</span>
+              <span className="text-[#5B3FD6] font-bold">4 of 6 core domains ready</span>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
               <div>
-                <span className="text-[11px] text-slate-500 font-medium">Python</span>
+                <span className="text-[11px] text-charcoal-100 font-medium">Python</span>
                 <ProgressBar value={70} height="sm" color="purple" showValueLabel={false} />
               </div>
               <div>
-                <span className="text-[11px] text-slate-500 font-medium">Problem Solving</span>
+                <span className="text-[11px] text-charcoal-100 font-medium">Problem Solving</span>
                 <ProgressBar value={85} height="sm" color="green" showValueLabel={false} />
               </div>
               <div>
-                <span className="text-[11px] text-slate-500 font-medium">ML Fundamentals</span>
+                <span className="text-[11px] text-charcoal-100 font-medium">ML Fundamentals</span>
                 <ProgressBar value={40} height="sm" color="amber" showValueLabel={false} />
               </div>
               <div>
-                <span className="text-[11px] text-slate-500 font-medium">Model Deploy</span>
+                <span className="text-[11px] text-charcoal-100 font-medium">Model Deploy</span>
                 <ProgressBar value={20} height="sm" color="purple" showValueLabel={false} />
               </div>
             </div>
@@ -160,21 +160,21 @@ export const DashboardView: React.FC = () => {
 
           {/* Bottom Highlights & Action */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
-            <div className="flex items-center gap-4 text-xs text-slate-600">
+            <div className="flex items-center gap-4 text-xs text-charcoal-100">
               <span className="flex items-center gap-1.5 font-medium">
-                <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                Market Demand: <strong className="text-slate-800">{primaryCareer.marketDemand}</strong>
+                <span className="w-2 h-2 rounded-full bg-[#6FAF8B]"></span>
+                Market Demand: <strong className="text-charcoal">{primaryCareer.marketDemand}</strong>
               </span>
               <span className="flex items-center gap-1.5 font-medium">
-                <TrendingUp className="w-3.5 h-3.5 text-brand-700" />
-                Est. Entry: <strong className="text-slate-800">₹14 - 32 LPA</strong>
+                <TrendingUp className="w-3.5 h-3.5 text-[#5B3FD6]" />
+                Est. Entry: <strong className="text-charcoal">₹14 - 32 LPA</strong>
               </span>
             </div>
 
             <div className="flex items-center gap-2 w-full sm:w-auto">
               <button
                 onClick={() => navigateTo('career-detail', primaryCareer.id)}
-                className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-brand-800 hover:bg-brand-900 text-white font-bold text-xs shadow-md shadow-brand-900/15 transition-all flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#5B3FD6] hover:bg-[#4E34BF] text-white font-bold text-xs shadow-sm transition-all flex items-center justify-center gap-2"
               >
                 <span>View Full Career Breakdown</span>
                 <ArrowRight className="w-4 h-4" />
@@ -185,27 +185,32 @@ export const DashboardView: React.FC = () => {
       </div>
 
       {/* Career Goal Planner Banner */}
-      <div className="p-4 sm:p-5 rounded-3xl bg-gradient-to-r from-brand-900 via-purple-900 to-brand-800 text-white shadow-card flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="p-5 rounded-3xl bg-[#F0ECFF] border border-[#DDD5FF] shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-3.5">
-          <div className="w-11 h-11 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center text-purple-200 shrink-0">
-            <Target className="w-5 h-5" />
+          <div className="w-12 h-12 rounded-2xl bg-white border border-[#DDD5FF] flex items-center justify-center text-[#5B3FD6] shrink-0 shadow-subtle">
+            <Target className="w-6 h-6 text-[#5B3FD6]" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-purple-300">Feature</span>
-              <span className="text-[10px] bg-brand-500/30 text-purple-200 px-2 py-0.5 rounded-full font-semibold border border-purple-400/30">Career Goal Planner</span>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-[#5B3FD6] bg-white px-2 py-0.5 rounded border border-[#DDD5FF]">
+                Goal Planner
+              </span>
+              <span className="text-[10px] bg-[#E4F3EA] text-[#36644B] px-2 py-0.5 rounded-full font-semibold border border-[#CEE8D8] flex items-center gap-1">
+                <Sparkles className="w-2.5 h-2.5 text-[#6FAF8B]" />
+                Student-Driven
+              </span>
             </div>
-            <h3 className="text-sm sm:text-base font-bold text-white mt-0.5">
+            <h3 className="text-sm sm:text-base font-bold text-[#292631] mt-1">
               Have a specific dream career in mind?
             </h3>
-            <p className="text-xs text-purple-200">
-              Say "I want to become a Data Scientist" or any of 10+ roles to see exact skill benchmarks, gaps, and roadmaps.
+            <p className="text-xs text-charcoal-200">
+              Say "I want to become a Data Scientist" or choose from 10+ roles to see exact requirements and benchmarks.
             </p>
           </div>
         </div>
         <button
           onClick={() => navigateTo('career-goal-planner')}
-          className="px-4 py-2 rounded-xl bg-white text-brand-900 hover:bg-purple-50 text-xs font-bold transition-all shrink-0 flex items-center justify-center gap-1.5 shadow-sm"
+          className="px-4 py-2.5 rounded-xl bg-[#5B3FD6] hover:bg-[#4E34BF] text-white text-xs font-bold transition-all shrink-0 flex items-center justify-center gap-2 shadow-sm active:scale-95"
         >
           <span>Open Goal Planner</span>
           <ArrowRight className="w-3.5 h-3.5" />

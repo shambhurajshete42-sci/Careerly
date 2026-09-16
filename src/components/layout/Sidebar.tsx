@@ -143,27 +143,27 @@ export const Sidebar: React.FC = () => {
       )}
 
       {/* Desktop Persistent Sidebar */}
-      <aside className="hidden lg:flex flex-col justify-between w-64 min-h-[calc(100vh-4rem)] bg-white border-r border-purple-100/80 p-4 sticky top-16 select-none shrink-0">
+      <aside className="hidden lg:flex flex-col justify-between w-64 min-h-[calc(100vh-4rem)] bg-white border-r border-beige-200 p-4 sticky top-16 select-none shrink-0">
         <div>
           {/* Logo & Subtitle */}
           <div 
             onClick={() => navigateTo('landing')}
-            className="px-3 py-3 rounded-xl mb-4 hover:bg-lavender-50 cursor-pointer transition-colors group"
+            className="px-3 py-3 rounded-xl mb-4 hover:bg-[#F0ECFF]/60 cursor-pointer transition-colors group"
           >
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-700 to-brand-900 flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
-                <Compass className="w-5 h-5 text-purple-200" />
+              <div className="w-9 h-9 rounded-xl bg-[#5B3FD6] flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+                <Compass className="w-5 h-5 text-white" />
               </div>
               <div>
                 <div className="flex items-center gap-1.5">
-                  <span className="font-extrabold text-lg tracking-tight text-slate-900 group-hover:text-brand-800 transition-colors">
+                  <span className="font-extrabold text-lg tracking-tight text-[#292631] group-hover:text-[#5B3FD6] transition-colors">
                     Careerly
                   </span>
-                  <span className="text-[10px] font-bold px-1.5 py-0.2 bg-brand-100 text-brand-800 rounded">
+                  <span className="text-[10px] font-bold px-1.5 py-0.2 bg-[#F0ECFF] text-[#5B3FD6] rounded">
                     ED-02
                   </span>
                 </div>
-                <p className="text-[11px] text-slate-400 font-medium">Career Intelligence</p>
+                <p className="text-[11px] text-charcoal-50 font-medium">Career Intelligence</p>
               </div>
             </div>
           </div>
@@ -171,15 +171,15 @@ export const Sidebar: React.FC = () => {
           {/* Student Profile Pill */}
           <div 
             onClick={() => navigateTo('profile')}
-            className="mb-5 mx-1 p-3 rounded-xl bg-lavender-50/80 border border-purple-100 hover:border-purple-200 cursor-pointer transition-all hover:shadow-subtle"
+            className="mb-5 mx-1 p-3 rounded-xl bg-[#FAF7F0] border border-beige-200 hover:border-[#DDD5FF] cursor-pointer transition-all hover:shadow-subtle"
           >
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full bg-brand-200/80 text-brand-800 font-bold flex items-center justify-center text-xs">
+              <div className="w-8 h-8 rounded-full bg-[#F0ECFF] text-[#5B3FD6] font-bold flex items-center justify-center text-xs border border-[#DDD5FF]">
                 {student.name.split(' ').map(n => n[0]).join('')}
               </div>
               <div className="overflow-hidden">
-                <p className="text-xs font-bold text-slate-900 truncate">{student.name}</p>
-                <p className="text-[11px] text-slate-500 truncate">{student.yearOfStudy} • {student.degreeCourse.split(' ')[0]}</p>
+                <p className="text-xs font-bold text-[#292631] truncate">{student.name}</p>
+                <p className="text-[11px] text-charcoal-100 truncate">{student.yearOfStudy} • {student.degreeCourse.split(' ')[0]}</p>
               </div>
             </div>
           </div>
@@ -195,26 +195,26 @@ export const Sidebar: React.FC = () => {
                   onClick={() => navigateTo(item.view)}
                   className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold tracking-wide transition-all group ${
                     isActive 
-                      ? 'bg-brand-800 text-white shadow-sm shadow-brand-900/10 font-bold' 
-                      : 'text-slate-600 hover:bg-lavender-50 hover:text-brand-900'
+                      ? 'bg-[#5B3FD6] text-white shadow-sm font-bold' 
+                      : 'text-charcoal-200 hover:bg-[#F0ECFF] hover:text-[#5B3FD6]'
                   }`}
                 >
                   <div className="flex items-center gap-3">
-                    <Icon className={`w-4 h-4 transition-colors ${isActive ? 'text-white' : 'text-slate-400 group-hover:text-brand-700'}`} />
+                    <Icon className={`w-4 h-4 transition-colors ${isActive ? 'text-white' : 'text-charcoal-50 group-hover:text-[#5B3FD6]'}`} />
                     <span>{item.label}</span>
                   </div>
                   {item.view === 'career-goal-planner' && (
-                    <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${isActive ? 'bg-brand-700 text-purple-100' : 'bg-brand-100 text-brand-800'}`}>
-                      Planner
+                    <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${isActive ? 'bg-white/20 text-white' : 'bg-[#E4F3EA] text-[#36644B]'}`}>
+                      Goal
                     </span>
                   )}
                   {item.view === 'roadmap' && (
-                    <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${isActive ? 'bg-brand-700 text-purple-100' : 'bg-lavender-100 text-brand-700'}`}>
+                    <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${isActive ? 'bg-white/20 text-white' : 'bg-[#E4F3EA] text-[#36644B]'}`}>
                       5 Phases
                     </span>
                   )}
                   {item.view === 'skill-gap' && (
-                    <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${isActive ? 'bg-brand-700 text-purple-100' : 'bg-amber-100 text-amber-800'}`}>
+                    <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${isActive ? 'bg-white/20 text-white' : 'bg-[#F0ECFF] text-[#5B3FD6]'}`}>
                       3 Focus
                     </span>
                   )}
@@ -225,13 +225,13 @@ export const Sidebar: React.FC = () => {
             {/* AI Assistant Navigation Button */}
             <button
               onClick={() => setAssistantOpen(true)}
-              className="w-full mt-2 flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-brand-800 bg-brand-50 hover:bg-brand-100 border border-brand-200/60 transition-all active:scale-98 group"
+              className="w-full mt-2 flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-[#5B3FD6] bg-[#F0ECFF] hover:bg-lavender-200 border border-[#DDD5FF] transition-all active:scale-98 group"
             >
               <div className="flex items-center gap-3">
-                <Bot className="w-4 h-4 text-brand-700 group-hover:scale-110 transition-transform" />
+                <Bot className="w-4 h-4 text-[#5B3FD6] group-hover:scale-110 transition-transform" />
                 <span>AI Career Assistant</span>
               </div>
-              <Sparkles className="w-3.5 h-3.5 text-brand-600 animate-pulse" />
+              <Sparkles className="w-3.5 h-3.5 text-[#5B3FD6] animate-pulse" />
             </button>
           </nav>
         </div>

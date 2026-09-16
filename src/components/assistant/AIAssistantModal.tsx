@@ -81,61 +81,62 @@ export const AIAssistantModal: React.FC = () => {
       /* Floating "Ask Careerly" Button */
       <button
         onClick={() => setAssistantOpen(true)}
-        className="fixed bottom-6 right-6 z-40 bg-brand-800 hover:bg-brand-900 text-white px-5 py-3 rounded-full shadow-lg shadow-brand-900/25 flex items-center gap-2.5 font-bold text-xs sm:text-sm hover:scale-105 active:scale-95 transition-all group"
+        className="fixed bottom-6 right-6 z-40 bg-[#5B3FD6] hover:bg-[#4b32b8] text-white px-5 py-3 rounded-full shadow-lg shadow-[#5B3FD6]/30 flex items-center gap-2.5 font-bold text-xs sm:text-sm hover:scale-105 active:scale-95 transition-all group"
       >
         <div className="relative">
-          <Bot className="w-5 h-5 text-purple-200" />
-          <span className="absolute -top-1 -right-1 w-2 h-2 bg-emerald-400 rounded-full animate-ping" />
+          <Bot className="w-5 h-5 text-white" />
+          <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#6FAF8B] rounded-full animate-ping" />
+          <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#6FAF8B] rounded-full" />
         </div>
-        <span>Ask Careerly</span>
+        <span>Ask Careerly AI</span>
       </button>
     );
   }
 
   return (
-    <div className="fixed inset-0 z-50 overflow-hidden flex justify-end bg-slate-900/30 backdrop-blur-xs transition-opacity">
+    <div className="fixed inset-0 z-50 overflow-hidden flex justify-end bg-black/30 backdrop-blur-xs transition-opacity">
       {/* Slide-over panel */}
       <div 
-        className="w-full max-w-md bg-white h-full shadow-2xl flex flex-col justify-between border-l border-purple-100 animate-slideLeft relative z-10"
+        className="w-full max-w-md bg-white h-full shadow-2xl flex flex-col justify-between border-l border-[#F0ECFF] animate-slideLeft relative z-10"
         onClick={e => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="p-4 sm:p-5 border-b border-purple-100 flex items-center justify-between bg-lavender-50/70">
+        <div className="p-4 sm:p-5 border-b border-[#F0ECFF] flex items-center justify-between bg-[#F0ECFF]/60">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-brand-800 text-white flex items-center justify-center shadow-sm">
-              <Bot className="w-5 h-5 text-purple-200" />
+            <div className="w-9 h-9 rounded-xl bg-[#5B3FD6] text-white flex items-center justify-center shadow-sm">
+              <Bot className="w-5 h-5 text-white" />
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <h3 className="font-bold text-slate-900 text-sm">Careerly AI Assistant</h3>
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <h3 className="font-bold text-[#292631] text-sm">Careerly AI Assistant</h3>
+                <span className="w-2 h-2 rounded-full bg-[#6FAF8B] animate-pulse" />
               </div>
               <p className="text-[11px] text-slate-500 font-medium">Grounding with {student.name.split(' ')[0]}'s Profile</p>
             </div>
           </div>
           <button
             onClick={() => setAssistantOpen(false)}
-            className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100"
+            className="p-1.5 rounded-lg text-slate-400 hover:text-[#292631] hover:bg-slate-100 transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Message Stream */}
-        <div className="flex-1 p-4 sm:p-5 overflow-y-auto space-y-4">
+        <div className="flex-1 p-4 sm:p-5 overflow-y-auto space-y-4 bg-[#F7F3EA]/30">
           {messages.map(m => {
             const isAI = m.sender === 'assistant';
             return (
               <div key={m.id} className={`flex gap-3 ${isAI ? 'items-start' : 'items-start flex-row-reverse'}`}>
                 <div className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 text-xs font-bold ${
-                  isAI ? 'bg-brand-800 text-white' : 'bg-slate-200 text-slate-700'
+                  isAI ? 'bg-[#5B3FD6] text-white shadow-xs' : 'bg-[#E4F3EA] text-[#6FAF8B]'
                 }`}>
-                  {isAI ? <Bot className="w-4 h-4 text-purple-200" /> : <User className="w-4 h-4" />}
+                  {isAI ? <Bot className="w-4 h-4 text-white" /> : <User className="w-4 h-4 text-[#292631]" />}
                 </div>
                 <div className={`rounded-2xl p-3.5 max-w-[85%] text-xs leading-relaxed ${
                   isAI
-                    ? 'bg-lavender-50/90 text-slate-800 border border-purple-100/80 whitespace-pre-line'
-                    : 'bg-brand-800 text-white font-medium'
+                    ? 'bg-[#F0ECFF] text-[#292631] border border-[#5B3FD6]/15 shadow-xs whitespace-pre-line'
+                    : 'bg-[#5B3FD6] text-white font-medium shadow-xs'
                 }`}>
                   {m.text}
                 </div>
@@ -144,26 +145,26 @@ export const AIAssistantModal: React.FC = () => {
           })}
 
           {isTyping && (
-            <div className="flex gap-3 items-center text-xs text-slate-400 italic">
-              <Bot className="w-4 h-4 text-brand-700 animate-spin" />
-              <span>Careerly AI is analyzing your questions...</span>
+            <div className="flex gap-3 items-center text-xs text-slate-500 italic">
+              <Bot className="w-4 h-4 text-[#5B3FD6] animate-spin" />
+              <span>Careerly AI is analyzing your profile & trends...</span>
             </div>
           )}
         </div>
 
         {/* Suggested Prompts & Input Area */}
-        <div className="p-4 border-t border-purple-100 bg-slate-50/50 space-y-3">
+        <div className="p-4 border-t border-[#F0ECFF] bg-white space-y-3">
           {/* Quick Suggestions */}
           <div className="space-y-1.5">
             <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
-              Suggested Questions:
+              Suggested Prompts:
             </span>
             <div className="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto">
               {suggestedQuestions.map(q => (
                 <button
                   key={q}
                   onClick={() => handleSend(q)}
-                  className="text-[11px] font-medium px-2.5 py-1 rounded-lg bg-white hover:bg-brand-50 text-slate-700 hover:text-brand-800 border border-purple-100 shadow-subtle transition-all text-left"
+                  className="text-[11px] font-medium px-2.5 py-1 rounded-lg bg-[#F7F3EA]/80 hover:bg-[#F0ECFF] text-[#292631] hover:text-[#5B3FD6] border border-slate-200/80 shadow-2xs transition-all text-left"
                 >
                   {q}
                 </button>
@@ -184,12 +185,12 @@ export const AIAssistantModal: React.FC = () => {
               value={inputVal}
               onChange={e => setInputVal(e.target.value)}
               placeholder="Ask anything about careers or skills..."
-              className="flex-1 px-3.5 py-2.5 rounded-xl border border-purple-100 bg-white text-xs font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:border-brand-600 focus:ring-2 focus:ring-purple-100"
+              className="flex-1 px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-xs font-medium text-[#292631] placeholder-slate-400 focus:outline-none focus:border-[#5B3FD6] focus:ring-2 focus:ring-[#F0ECFF]"
             />
             <button
               type="submit"
               disabled={!inputVal.trim()}
-              className="p-2.5 rounded-xl bg-brand-800 hover:bg-brand-900 disabled:opacity-40 text-white transition-colors shrink-0"
+              className="p-2.5 rounded-xl bg-[#5B3FD6] hover:bg-[#4b32b8] disabled:opacity-40 text-white transition-colors shrink-0 shadow-xs"
             >
               <Send className="w-4 h-4" />
             </button>

@@ -40,10 +40,10 @@ export const LearningResourcesView: React.FC = () => {
   return (
     <div className="space-y-8 pb-14">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-purple-100/60">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
         <div>
           <div className="flex items-center gap-2">
-            <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+            <h1 className="text-2xl sm:text-3xl font-black text-[#292631] tracking-tight">
               Learning Library
             </h1>
             <Badge variant="purple" size="sm">Skill Gap Connected</Badge>
@@ -61,16 +61,16 @@ export const LearningResourcesView: React.FC = () => {
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
             placeholder="Search skills, topics..."
-            className="w-full pl-9 pr-4 py-2 rounded-xl border border-purple-100 bg-white text-xs font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:border-brand-600 focus:ring-2 focus:ring-purple-100"
+            className="w-full pl-9 pr-4 py-2 rounded-xl border border-slate-200 bg-white text-xs font-medium text-[#292631] placeholder-slate-400 focus:outline-none focus:border-[#5B3FD6] focus:ring-2 focus:ring-[#F0ECFF]"
           />
         </div>
       </div>
 
       {/* Added Toast */}
       {addedToast && (
-        <div className="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs font-semibold flex items-center justify-between animate-fadeIn">
+        <div className="p-3.5 rounded-2xl bg-[#E4F3EA] border border-[#6FAF8B] text-[#292631] text-xs font-semibold flex items-center justify-between animate-fadeIn">
           <span>✓ Added <strong>{addedToast}</strong> to your saved roadmap resources!</span>
-          <button onClick={() => navigateTo('roadmap')} className="underline text-emerald-800">
+          <button onClick={() => navigateTo('roadmap')} className="underline text-[#5B3FD6] font-bold">
             View Roadmap
           </button>
         </div>
@@ -84,8 +84,8 @@ export const LearningResourcesView: React.FC = () => {
             onClick={() => setSelectedCategory(cat)}
             className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${
               selectedCategory === cat
-                ? 'bg-brand-800 text-white shadow-sm'
-                : 'bg-white text-slate-600 border border-purple-100 hover:bg-lavender-50'
+                ? 'bg-[#5B3FD6] text-white shadow-xs'
+                : 'bg-white text-[#292631] border border-slate-200 hover:bg-[#F0ECFF]'
             }`}
           >
             {cat}
@@ -99,7 +99,7 @@ export const LearningResourcesView: React.FC = () => {
           return (
             <div
               key={res.id}
-              className="bg-white rounded-3xl p-6 shadow-card border border-purple-100 hover:border-brand-300 hover:shadow-card-hover transition-all flex flex-col justify-between group"
+              className="bg-white rounded-3xl p-6 shadow-card border border-slate-200 hover:border-[#5B3FD6]/40 hover:shadow-card-hover transition-all flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-start justify-between gap-2 mb-2">
@@ -111,7 +111,7 @@ export const LearningResourcesView: React.FC = () => {
                   </span>
                 </div>
 
-                <h3 className="font-bold text-slate-900 text-base group-hover:text-brand-900 transition-colors line-clamp-2">
+                <h3 className="font-bold text-[#292631] text-base group-hover:text-[#5B3FD6] transition-colors line-clamp-2">
                   {res.title}
                 </h3>
 
@@ -123,9 +123,9 @@ export const LearningResourcesView: React.FC = () => {
                   {res.focus}
                 </p>
 
-                <div className="flex items-center gap-4 text-xs text-slate-500 mb-4 pt-2 border-t border-purple-50">
+                <div className="flex items-center gap-4 text-xs text-slate-500 mb-4 pt-2 border-t border-slate-100">
                   <span className="flex items-center gap-1 font-medium">
-                    <Clock className="w-3.5 h-3.5 text-brand-700" />
+                    <Clock className="w-3.5 h-3.5 text-[#5B3FD6]" />
                     {res.duration}
                   </span>
                   <span className="flex items-center gap-1 font-semibold text-amber-600">
@@ -137,7 +137,7 @@ export const LearningResourcesView: React.FC = () => {
                 {/* Skills tags */}
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {res.skillsTaught.map(sk => (
-                    <span key={sk} className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-lavender-50 text-brand-800 border border-purple-100">
+                    <span key={sk} className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-[#F0ECFF] text-[#5B3FD6] border border-[#5B3FD6]/20">
                       {sk}
                     </span>
                   ))}
@@ -150,17 +150,17 @@ export const LearningResourcesView: React.FC = () => {
                   onClick={() => handleAddToRoadmap(res.title, res.id)}
                   className={`px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-all ${
                     res.saved 
-                      ? 'bg-emerald-50 text-emerald-800 border border-emerald-300' 
-                      : 'bg-slate-50 hover:bg-lavender-50 text-slate-700 border border-slate-200'
+                      ? 'bg-[#E4F3EA] text-[#292631] border border-[#6FAF8B]' 
+                      : 'bg-slate-50 hover:bg-[#F0ECFF] text-[#292631] border border-slate-200'
                   }`}
                 >
-                  {res.saved ? <BookmarkCheck className="w-3.5 h-3.5 text-emerald-600" /> : <Plus className="w-3.5 h-3.5" />}
+                  {res.saved ? <BookmarkCheck className="w-3.5 h-3.5 text-[#6FAF8B]" /> : <Plus className="w-3.5 h-3.5" />}
                   <span>{res.saved ? 'Saved' : 'Add to Roadmap'}</span>
                 </button>
 
                 <button
-                  onClick={() => alert(`Launching mock preview for "${res.title}". In production this links directly to university LMS or partner courses.`)}
-                  className="px-4 py-2 rounded-xl bg-brand-800 hover:bg-brand-900 text-white font-bold text-xs shadow-subtle flex items-center gap-1 transition-all"
+                  onClick={() => alert(`Launching preview for "${res.title}".`)}
+                  className="px-4 py-2 rounded-xl bg-[#5B3FD6] hover:bg-[#4b32b8] text-white font-bold text-xs shadow-xs flex items-center gap-1 transition-all"
                 >
                   <span>Explore</span>
                   <ExternalLink className="w-3 h-3" />

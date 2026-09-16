@@ -6,8 +6,7 @@
 - **Abhijeet Raut** — Full Stack & AI Architect  
 - **Shambhuraj Shete** — UI/UX & Product Engineer  
 
-🌐 **Public Web App (Accessible to Anyone):** [https://shambhurajshete42-sci.github.io/Careerly/](https://shambhurajshete42-sci.github.io/Careerly/)  
-💻 **Local Dev Link:** [http://localhost:5173/](http://localhost:5173/)
+🌐 **Live Web Application:** [https://shambhurajshete42-sci.github.io/Careerly/](https://shambhurajshete42-sci.github.io/Careerly/)
 
 ---
 
@@ -76,7 +75,7 @@ npm install
 # Start development server
 npm run dev
 ```
-Open [http://localhost:5173/](http://localhost:5173/) in your browser to test the live prototype.
+Test the live prototype directly at [https://shambhurajshete42-sci.github.io/Careerly/](https://shambhurajshete42-sci.github.io/Careerly/).
 
 ### Production Build
 ```bash

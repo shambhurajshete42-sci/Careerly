@@ -6,7 +6,8 @@
 - **Abhijeet Raut** — Full Stack & AI Architect  
 - **Shambhuraj Shete** — UI/UX & Product Engineer  
 
-🌐 **Live Prototype Link:** [http://localhost:5173/](http://localhost:5173/)
+🌐 **Public Web App (Accessible to Anyone):** [https://shambhurajshete42-sci.github.io/Careerly/](https://shambhurajshete42-sci.github.io/Careerly/)  
+💻 **Local Dev Link:** [http://localhost:5173/](http://localhost:5173/)
 
 ---
 

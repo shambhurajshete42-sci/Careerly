@@ -17,8 +17,8 @@ export const HACKATHON_METADATA = {
   teamName: 'Careerly Core Team',
   institution: 'GH Raisoni International Skill Tech University, Pune',
   teamMembers: [
-    { name: 'Abhijeet Raut' },
-    { name: 'Shambhuraj Shete' }
+    { name: 'Abhijeet Raut', role: 'AI/Logic/Research Developer & Product Lead' },
+    { name: 'Shambhuraj Shete', role: 'Full-Stack & AI developer' }
   ]
 };
 

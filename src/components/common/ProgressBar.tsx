@@ -23,6 +23,8 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
 }) => {
   const percentage = Math.min(100, Math.max(0, (value / max) * 100));
   const targetPercentage = targetValue !== undefined ? Math.min(100, Math.max(0, (targetValue / max) * 100)) : undefined;
+  const displayPercentage = Math.round(percentage);
+  const displayTargetPercentage = targetPercentage !== undefined ? Math.round(targetPercentage) : undefined;
 
   const heightClasses = {
     sm: 'h-1.5',
@@ -48,14 +50,14 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
           </div>
           {showValueLabel && (
             <div className="flex items-center gap-2 font-medium">
-              {targetPercentage !== undefined ? (
+              {displayTargetPercentage !== undefined ? (
                 <span className="text-slate-600">
-                  <span className="font-semibold text-brand-700">{percentage}%</span>
+                  <span className="font-semibold text-brand-700">{displayPercentage}%</span>
                   <span className="text-slate-400 mx-1">/</span>
-                  <span className="text-slate-500">Target: {targetPercentage}%</span>
+                  <span className="text-slate-500">Target: {displayTargetPercentage}%</span>
                 </span>
               ) : (
-                <span className="text-slate-600 font-semibold">{percentage}%</span>
+                <span className="text-slate-600 font-semibold">{displayPercentage}%</span>
               )}
             </div>
           )}

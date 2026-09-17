@@ -79,12 +79,12 @@ export const SkillGapView: React.FC = () => {
 
       {/* Interactive Simulation Notification Banner */}
       {justLeveledUp && (
-        <div className="p-4 rounded-2xl bg-[#E4F3EA] border border-[#6FAF8B] text-[#292631] text-xs font-medium flex items-center justify-between animate-bounce">
+        <div className="p-4 rounded-2xl bg-[#E4F3EA] border border-[#6FAF8B] text-[#292631] text-xs font-medium flex items-center justify-between animate-fadeIn">
           <div className="flex items-center gap-2">
             <Sparkles className="w-4 h-4 text-[#6FAF8B]" />
-            <span>Successfully practiced and leveled up: <strong>{justLeveledUp}</strong> (+15% proficiency boost)!</span>
+            <span>Successfully practiced: <strong>{justLeveledUp}</strong>. Skill proficiency updated.</span>
           </div>
-          <span className="text-[11px] font-bold text-[#6FAF8B]">Career Readiness Recalculated</span>
+          <span className="text-[11px] font-bold text-sage-800">Career Readiness Recalculated</span>
         </div>
       )}
 
@@ -197,10 +197,10 @@ export const SkillGapView: React.FC = () => {
                 <button
                   onClick={() => handlePracticeLevelUp(skill.name)}
                   className="px-3 py-1.5 rounded-xl bg-[#E4F3EA] hover:bg-[#d5eee0] border border-[#6FAF8B]/30 text-[#292631] font-semibold text-[11px] transition-colors flex items-center justify-center gap-1"
-                  title="Simulate student studying this skill"
+                  title="Practice this skill"
                 >
                   <Zap className="w-3 h-3 text-[#6FAF8B]" />
-                  <span>Practice &amp; Level Up</span>
+                  <span>Practice this skill</span>
                 </button>
               </div>
             </div>

@@ -102,30 +102,30 @@ export const CareerDetailView: React.FC = () => {
         </div>
 
         {/* Quick Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 pt-6 border-t border-slate-100 text-xs">
-          <div className="p-3.5 rounded-xl bg-[#F7F3EA]/70 border border-slate-200/60">
-            <span className="text-slate-500 font-medium block text-[11px]">Salary Benchmark (Demo):</span>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 pt-6 border-t border-beige-200 text-xs">
+          <div className="p-3.5 rounded-xl bg-beige-50 border border-beige-200">
+            <span className="text-charcoal-100 font-medium block text-[11px]">Indicative salary range:</span>
             <span className="text-[#292631] font-bold text-sm">{career.salaryRange}</span>
           </div>
-          <div className="p-3.5 rounded-xl bg-[#F7F3EA]/70 border border-slate-200/60">
-            <span className="text-slate-500 font-medium block text-[11px]">Core Discipline:</span>
+          <div className="p-3.5 rounded-xl bg-beige-50 border border-beige-200">
+            <span className="text-charcoal-100 font-medium block text-[11px]">Core Discipline:</span>
             <span className="text-[#292631] font-bold text-sm">Computer Science &amp; Applied AI</span>
           </div>
-          <div className="p-3.5 rounded-xl bg-[#F7F3EA]/70 border border-slate-200/60">
-            <span className="text-slate-500 font-medium block text-[11px]">Readiness Velocity:</span>
+          <div className="p-3.5 rounded-xl bg-beige-50 border border-beige-200">
+            <span className="text-charcoal-100 font-medium block text-[11px]">Readiness Velocity:</span>
             <span className="text-[#5B3FD6] font-bold text-sm">Estimated 4–6 Months to Job Ready</span>
           </div>
         </div>
       </div>
 
       {/* Visual Skill Comparison: YOUR LEVEL vs TARGET LEVEL */}
-      <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-card border border-[#F0ECFF] space-y-6">
+      <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-card border border-beige-200 space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
             <h2 className="text-xl font-bold text-[#292631]">
               Visual Skill Comparison
             </h2>
-            <p className="text-xs text-slate-500 mt-0.5">
+            <p className="text-xs text-charcoal-100 mt-0.5">
               Side-by-side benchmark of your current capability against market target proficiency.
             </p>
           </div>
@@ -134,7 +134,7 @@ export const CareerDetailView: React.FC = () => {
               <span className="w-3 h-3 rounded-full bg-[#5B3FD6]"></span>
               YOUR CURRENT LEVEL
             </span>
-            <span className="flex items-center gap-1.5 text-slate-500">
+            <span className="flex items-center gap-1.5 text-charcoal-100">
               <span className="w-3 h-3 rounded-full bg-[#F0ECFF] border border-[#5B3FD6]"></span>
               TARGET INDUSTRY LEVEL
             </span>
@@ -144,7 +144,7 @@ export const CareerDetailView: React.FC = () => {
         <div className="space-y-5 pt-2">
           {career.skills.map(skill => {
             return (
-              <div key={skill.name} className="p-4 rounded-2xl bg-[#F0ECFF]/30 border border-[#F0ECFF] space-y-2">
+              <div key={skill.name} className="p-4 rounded-2xl bg-[#F0ECFF]/30 border border-[#DDD5FF] space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-1">
                   <div className="flex items-center gap-2">
                     <span className="font-bold text-[#292631] text-sm">{skill.name}</span>
@@ -155,10 +155,10 @@ export const CareerDetailView: React.FC = () => {
                       {skill.gap} Gap
                     </Badge>
                   </div>
-                  <div className="text-xs text-slate-500 font-medium">
-                    Current: <strong className="text-[#5B3FD6]">{skill.currentLevel} ({skill.currentPercentage}%)</strong>
+                  <div className="text-xs text-charcoal-100 font-medium">
+                    Current: <strong className="text-[#5B3FD6]">{skill.currentLevel} ({Math.round(skill.currentPercentage)}%)</strong>
                     <span className="mx-2">→</span>
-                    Target: <strong className="text-[#292631]">{skill.targetLevel} ({skill.targetPercentage}%)</strong>
+                    Target: <strong className="text-[#292631]">{skill.targetLevel} ({Math.round(skill.targetPercentage)}%)</strong>
                   </div>
                 </div>
 
@@ -170,11 +170,11 @@ export const CareerDetailView: React.FC = () => {
                   showValueLabel={false}
                 />
 
-                <div className="flex items-center justify-between pt-1 text-[11px] text-slate-500">
+                <div className="flex items-center justify-between pt-1 text-[11px] text-charcoal-100">
                   <span>Recommended Focus: <strong className="text-[#292631]">{skill.recommendedResource}</strong></span>
                   <button
                     onClick={() => navigateTo('learning')}
-                    className="font-bold text-[#5B3FD6] hover:text-[#4b32b8] transition-colors"
+                    className="font-bold text-[#5B3FD6] hover:text-[#4E34BF] transition-colors"
                   >
                     Find Courses →
                   </button>
@@ -189,45 +189,40 @@ export const CareerDetailView: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left (8 cols): Overview & Market Outlook */}
         <div className="lg:col-span-8 space-y-6">
-          <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-[#F0ECFF] space-y-3">
+          <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-beige-200 space-y-3">
             <h3 className="text-base font-bold text-[#292631]">
               Role Overview &amp; Day-to-Day
             </h3>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-sm text-charcoal-200 leading-relaxed">
               {career.overview}
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-[#F0ECFF] space-y-3">
+          <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-beige-200 space-y-3">
             <div className="flex items-center gap-2 text-[#5B3FD6]">
               <TrendingUp className="w-5 h-5 text-[#5B3FD6]" />
               <h3 className="text-base font-bold text-[#292631]">
                 Market Outlook &amp; Hiring Trajectory
               </h3>
             </div>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-sm text-charcoal-200 leading-relaxed">
               {career.marketOutlook}
             </p>
           </div>
         </div>
 
-        {/* Right (4 cols): Possible Roles & Next Steps */}
+        {/* Right (4 cols): Compact Related Roles & Action Plan */}
         <div className="lg:col-span-4 space-y-6">
-          <div className="bg-white rounded-3xl p-6 shadow-card border border-[#F0ECFF] space-y-4">
+          <div className="bg-white rounded-3xl p-6 shadow-card border border-beige-200 space-y-3">
             <div className="flex items-center gap-2">
-              <Briefcase className="w-5 h-5 text-[#5B3FD6]" />
-              <h3 className="text-base font-bold text-[#292631]">
-                Possible Job Titles
+              <Briefcase className="w-4 h-4 text-[#5B3FD6]" />
+              <h3 className="text-sm font-bold text-[#292631]">
+                Related Roles
               </h3>
             </div>
-            <div className="space-y-2">
-              {career.possibleRoles.map((role, idx) => (
-                <div key={idx} className="p-2.5 rounded-xl bg-[#F0ECFF]/40 border border-[#F0ECFF] text-xs font-semibold text-[#292631] flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#5B3FD6]"></span>
-                  <span>{role}</span>
-                </div>
-              ))}
-            </div>
+            <p className="text-xs text-charcoal-200 font-medium leading-relaxed">
+              {career.possibleRoles.join(' · ')}
+            </p>
           </div>
 
           <div className="bg-[#5B3FD6] text-white rounded-3xl p-6 shadow-card space-y-3">

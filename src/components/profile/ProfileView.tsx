@@ -94,7 +94,7 @@ export const ProfileView: React.FC = () => {
         <div className="w-full md:w-64 p-4 rounded-2xl bg-[#F0ECFF] border border-[#5B3FD6]/20 space-y-1.5">
           <div className="flex justify-between text-xs font-bold">
             <span className="text-slate-700">Profile Completeness</span>
-            <span className="text-[#5B3FD6]">{student.profileCompleteness}%</span>
+            <span className="text-[#5B3FD6]">{Math.round(student.profileCompleteness)}%</span>
           </div>
           <ProgressBar value={student.profileCompleteness} height="sm" color="purple" showValueLabel={false} />
           <span className="text-[10px] text-slate-400 block text-right">High Data Quality</span>
@@ -111,7 +111,7 @@ export const ProfileView: React.FC = () => {
               <h3 className="font-bold text-[#292631]">Current Target Career</h3>
             </div>
             <span className="text-xs font-bold text-[#6FAF8B] bg-[#E4F3EA] px-2 py-0.5 rounded-full border border-[#6FAF8B]/30">
-              {activeTargetCareer.matchPercentage}% Match
+              {Math.round(activeTargetCareer.matchPercentage)}% Fit
             </span>
           </div>
 
@@ -195,7 +195,7 @@ export const ProfileView: React.FC = () => {
               <div key={s.name} className="flex justify-between items-center text-xs p-2.5 rounded-xl bg-[#F7F3EA]/60 border border-slate-200/60">
                 <span className="font-bold text-[#292631]">{s.name}</span>
                 <span className="font-semibold text-[#5B3FD6] bg-[#F0ECFF] px-2 py-0.5 rounded border border-[#5B3FD6]/20">
-                  {s.level} ({s.percentage}%)
+                  {s.level} ({Math.round(s.percentage)}%)
                 </span>
               </div>
             ))}

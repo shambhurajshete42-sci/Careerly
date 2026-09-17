@@ -6,8 +6,8 @@
 **Problem Statement:** ED-02 (AI-Powered Career Guidance System)  
 **Team:** Careerly Core Team  
 **Team Members:**  
-- **Abhijeet Raut** — Full Stack & AI Architect  
-- **Shambhuraj Shete** — UI/UX & Product Engineer  
+Abhijeet Raut  
+Shambhuraj Shete  
 
 ---
 

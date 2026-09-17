@@ -72,6 +72,15 @@ export const CareerGoalPlannerView: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [skillFilter, setSkillFilter] = useState<'All' | 'Priority' | 'Developing' | 'Strong'>('All');
   const [boostedSkill, setBoostedSkill] = useState<string | null>(null);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisStepIndex, setAnalysisStepIndex] = useState(0);
+
+  const analysisSteps = [
+    'Analyzing your profile…',
+    'Comparing your skills…',
+    'Identifying skill gaps…',
+    'Building your career path…'
+  ];
 
   // Active career goal
   const currentCareerGoal = useMemo(() => {
@@ -102,8 +111,20 @@ export const CareerGoalPlannerView: React.FC = () => {
 
   const handleSelectCareer = (careerId: string) => {
     setSelectedGoalCareerId(careerId);
-    setActiveMode('details');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsAnalyzing(true);
+    setAnalysisStepIndex(0);
+
+    setTimeout(() => setAnalysisStepIndex(1), 350);
+    setTimeout(() => setAnalysisStepIndex(2), 700);
+    setTimeout(() => setAnalysisStepIndex(3), 1050);
+    setTimeout(() => {
+      setAnalysisStepIndex(4);
+      setTimeout(() => {
+        setIsAnalyzing(false);
+        setActiveMode('details');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 700);
+    }, 1400);
   };
 
   const handleSetAsTarget = (careerId: string) => {
@@ -324,7 +345,7 @@ export const CareerGoalPlannerView: React.FC = () => {
                 {/* Card Action Button */}
                 <div className="pt-2 border-t border-purple-50 flex items-center justify-between gap-3">
                   <div className="text-[11px] font-semibold text-slate-400">
-                    <span>{career.salaryRange.split('/')[0]}</span>
+                    <span>Indicative: {career.salaryRange.split('/')[0]}</span>
                   </div>
 
                   <button
@@ -356,6 +377,56 @@ export const CareerGoalPlannerView: React.FC = () => {
             >
               Reset Filters
             </button>
+          </div>
+        )}
+
+        {/* Local Analysis Animation Modal */}
+        {isAnalyzing && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal/40 backdrop-blur-sm">
+            <div className="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl border border-brand-100 text-center space-y-5">
+              <div className="w-16 h-16 rounded-2xl bg-[#F0ECFF] text-[#5B3FD6] flex items-center justify-center mx-auto shadow-sm">
+                {analysisStepIndex === 4 ? (
+                  <CheckCircle2 className="w-8 h-8 text-sage-600" />
+                ) : (
+                  <Brain className="w-8 h-8 text-[#5B3FD6] animate-pulse" />
+                )}
+              </div>
+              <div>
+                <h3 className="text-xl font-extrabold text-charcoal">
+                  {analysisStepIndex === 4 ? 'Your Career Path is Ready' : 'Personalizing Career Blueprint'}
+                </h3>
+                <p className="text-xs text-charcoal-100 mt-1">
+                  {analysisStepIndex === 4
+                    ? `Targeting ${CAREER_GOALS.find(c => c.id === selectedGoalCareerId)?.title || 'Career'}`
+                    : analysisSteps[analysisStepIndex]}
+                </p>
+              </div>
+              <div className="space-y-2 text-left text-xs max-w-xs mx-auto pt-2">
+                {analysisSteps.map((stepText, idx) => {
+                  const isPassed = analysisStepIndex > idx || analysisStepIndex === 4;
+                  const isCurrent = analysisStepIndex === idx;
+                  return (
+                    <div
+                      key={idx}
+                      className={`p-2.5 rounded-xl flex items-center gap-2.5 transition-all ${
+                        isPassed
+                          ? 'bg-sage-50 text-sage-800 font-semibold'
+                          : isCurrent
+                          ? 'bg-[#F0ECFF] text-[#5B3FD6] font-bold'
+                          : 'text-charcoal-50 opacity-40'
+                      }`}
+                    >
+                      {isPassed ? (
+                        <Check className="w-4 h-4 text-sage-600 shrink-0" />
+                      ) : (
+                        <div className={`w-2 h-2 rounded-full ${isCurrent ? 'bg-[#5B3FD6] animate-ping' : 'bg-charcoal-50'}`} />
+                      )}
+                      <span>{stepText}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         )}
       </div>
@@ -450,7 +521,7 @@ export const CareerGoalPlannerView: React.FC = () => {
           {/* Quick Metrics Pill */}
           <div className="bg-lavender-50/70 border border-purple-100 rounded-2xl p-4 shrink-0 space-y-2 text-xs w-full lg:w-64">
             <div className="flex justify-between items-center">
-              <span className="text-slate-500 font-medium">Estimated Pay:</span>
+              <span className="text-slate-500 font-medium">Indicative salary range:</span>
               <span className="font-bold text-slate-900">{currentCareerGoal.salaryRange.split('/')[0]}</span>
             </div>
             <div className="flex justify-between items-center">
@@ -646,10 +717,10 @@ export const CareerGoalPlannerView: React.FC = () => {
                           ? 'bg-emerald-600 text-white shadow-xs' 
                           : 'bg-white hover:bg-brand-50 text-brand-800 border border-brand-200 shadow-xs active:scale-95'
                       }`}
-                      title="Simulate practicing this skill to level up your score"
+                      title="Practice this skill to update your readiness score"
                     >
                       <Zap className={`w-3 h-3 ${isBoosted ? 'animate-bounce' : 'text-brand-600'}`} />
-                      <span>{isBoosted ? 'Leveled Up! +15%' : 'Practice +15%'}</span>
+                      <span>{isBoosted ? 'Practiced! Skill Updated' : 'Practice this skill'}</span>
                     </button>
                   </div>
                 </div>

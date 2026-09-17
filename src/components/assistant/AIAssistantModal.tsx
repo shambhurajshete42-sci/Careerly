@@ -78,17 +78,16 @@ export const AIAssistantModal: React.FC = () => {
 
   if (!isAssistantOpen) {
     return (
-      /* Floating "Ask Careerly" Button */
+      /* Subtle Floating Assistant Button */
       <button
         onClick={() => setAssistantOpen(true)}
-        className="fixed bottom-6 right-6 z-40 bg-[#5B3FD6] hover:bg-[#4b32b8] text-white px-5 py-3 rounded-full shadow-lg shadow-[#5B3FD6]/30 flex items-center gap-2.5 font-bold text-xs sm:text-sm hover:scale-105 active:scale-95 transition-all group"
+        className="fixed bottom-5 right-5 z-40 bg-white hover:bg-[#F0ECFF] text-[#292631] hover:text-[#5B3FD6] px-3.5 py-2 rounded-full border border-beige-200 shadow-subtle hover:shadow-card flex items-center gap-2 text-xs font-semibold transition-all group"
+        title="Ask Careerly AI"
       >
-        <div className="relative">
-          <Bot className="w-5 h-5 text-white" />
-          <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#6FAF8B] rounded-full animate-ping" />
-          <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#6FAF8B] rounded-full" />
+        <div className="w-5 h-5 rounded-full bg-[#F0ECFF] text-[#5B3FD6] flex items-center justify-center group-hover:scale-105 transition-transform">
+          <Bot className="w-3.5 h-3.5" />
         </div>
-        <span>Ask Careerly AI</span>
+        <span className="hidden sm:inline">Ask AI</span>
       </button>
     );
   }

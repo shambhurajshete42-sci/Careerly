@@ -10,12 +10,9 @@ import {
   CheckCircle2, 
   User, 
   Cpu, 
-  Award, 
-  Layers,
-  GraduationCap
+  Layers
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
-import { HACKATHON_METADATA } from '../../data/sampleData';
 
 export const LandingPage: React.FC = () => {
   const { navigateTo } = useApp();
@@ -24,22 +21,22 @@ export const LandingPage: React.FC = () => {
     {
       icon: Target,
       title: 'Personalized Career Recommendations',
-      description: 'High-confidence AI role matching evaluated on your unique skills, academic strengths, and passions.'
+      description: 'Explore high-match roles evaluated on your real skills, strengths, and academic interests.'
     },
     {
       icon: SplitSquareVertical,
       title: 'Skill Gap Analysis',
-      description: 'Visual benchmark of where your proficiency is today versus what top industry employers actually require.'
+      description: 'See how your current skills compare with industry requirements and know what to build next.'
     },
     {
       icon: TrendingUp,
       title: 'Market-Aware Insights',
-      description: 'Real-time alignment with emerging tech trends, compensation ranges, and live job growth trajectories.'
+      description: 'Stay grounded with in-demand skills, hiring trends, and realistic growth trajectories.'
     },
     {
       icon: Milestone,
       title: 'Step-by-Step Roadmaps',
-      description: 'Actionable 5-phase career pathways with curated projects, certifications, and portfolio checkpoints.'
+      description: 'Follow actionable milestones with curated projects, practice checkpoints, and portfolio goals.'
     }
   ];
 
@@ -57,7 +54,7 @@ export const LandingPage: React.FC = () => {
               {/* Pill badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F0ECFF] border border-[#DDD5FF] text-[#5B3FD6] text-xs font-semibold tracking-wide shadow-subtle">
                 <Sparkles className="w-3.5 h-3.5 text-[#5B3FD6] animate-pulse" />
-                <span>Next-Gen Career Intelligence for Students</span>
+                <span>Career Intelligence for Students</span>
               </div>
 
               {/* Headline */}
@@ -71,7 +68,7 @@ export const LandingPage: React.FC = () => {
 
               {/* Subheading */}
               <p className="text-base sm:text-lg text-charcoal-200 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                AI-powered career guidance that connects what you're good at with where the market is heading. Stop guessing career paths and start building with personalized intelligence.
+                Personalized guidance connecting your skills and interests with clear career roadmaps. Discover your path, identify skill gaps, and take confident next steps.
               </p>
 
               {/* CTAs */}
@@ -93,15 +90,19 @@ export const LandingPage: React.FC = () => {
                 </button>
               </div>
 
-              {/* Quick Trust / Hackathon Metadata */}
-              <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 text-xs text-charcoal-100">
+              {/* Core Student Pillars */}
+              <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 text-xs text-charcoal-100 font-medium">
                 <span className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#6FAF8B]" />
-                  Problem Statement: <strong>{HACKATHON_METADATA.problemStatementId}</strong>
+                  10+ Career Paths
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <Award className="w-4 h-4 text-[#5B3FD6]" />
-                  Team: <strong>{HACKATHON_METADATA.teamName}</strong>
+                  <CheckCircle2 className="w-4 h-4 text-[#6FAF8B]" />
+                  Personalized Roadmaps
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#6FAF8B]" />
+                  Practical Skill Benchmarks
                 </span>
               </div>
             </div>
@@ -274,13 +275,13 @@ export const LandingPage: React.FC = () => {
       <section className="py-14 my-8 mx-4 sm:mx-8 rounded-3xl bg-[#5B3FD6] text-white relative overflow-hidden shadow-card">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-5">
           <span className="text-xs font-semibold px-3 py-1 rounded-full bg-white/15 text-purple-100 border border-white/20">
-            Hackathon Showcase • ED-02
+            Student Career Guidance
           </span>
           <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
-            Ready to explore your personalized career intelligence?
+            Ready to explore your personalized career path?
           </h2>
           <p className="text-xs sm:text-base text-purple-100 max-w-xl mx-auto font-light leading-relaxed">
-            Take the 2-minute student assessment or jump straight into the live interactive dashboard preloaded with demo data.
+            Take the 2-minute assessment or explore available career paths and roadmaps.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <button
@@ -290,10 +291,10 @@ export const LandingPage: React.FC = () => {
               Start 5-Step Assessment
             </button>
             <button
-              onClick={() => navigateTo('dashboard')}
+              onClick={() => navigateTo('career-explorer')}
               className="px-7 py-3 rounded-xl bg-white/15 hover:bg-white/25 text-white font-semibold text-sm border border-white/30 transition-all"
             >
-              Enter Live Dashboard Directly
+              Explore Career Paths
             </button>
           </div>
         </div>
@@ -307,15 +308,16 @@ export const LandingPage: React.FC = () => {
               C
             </div>
             <span className="font-bold text-[#292631]">Careerly</span>
-            <span className="text-charcoal-50">— AI-Powered Career Guidance System</span>
+            <span className="text-charcoal-50">— Personalized Career Intelligence</span>
           </div>
 
           <div className="text-center sm:text-right text-[11px] text-charcoal-50">
-            <p className="font-semibold text-charcoal-200">Team {HACKATHON_METADATA.teamName}</p>
-            <p className="text-charcoal-100 font-medium">Developed by Abhijeet Raut &amp; Shambhuraj Shete</p>
+            <p className="font-semibold text-charcoal-200">Careerly AI Career Guidance</p>
+            <p className="text-charcoal-100 font-medium">Empowering students to discover, prepare, and thrive</p>
           </div>
         </div>
       </footer>
     </div>
   );
 };
+

@@ -14,19 +14,19 @@ export const Navbar: React.FC = () => {
           onClick={() => navigateTo('landing')}
           className="flex items-center gap-2.5 cursor-pointer group"
         >
-          <div className="w-10 h-10 rounded-xl bg-[#5B3FD6] flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+          <div className="w-9 h-9 rounded-xl bg-[#5B3FD6] flex items-center justify-center text-white transition-opacity group-hover:opacity-90">
             <Compass className="w-5 h-5 text-white" />
           </div>
           <div>
             <div className="flex items-center gap-1.5">
-              <span className="text-xl font-black tracking-tight text-[#292631] group-hover:text-[#5B3FD6] transition-colors">
+              <span className="text-lg font-bold tracking-tight text-[#292631] group-hover:text-[#5B3FD6] transition-colors">
                 Careerly
               </span>
-              <span className="bg-[#F0ECFF] text-[#5B3FD6] text-[10px] font-bold px-1.5 py-0.5 rounded-md uppercase tracking-wider">
+              <span className="bg-[#F0ECFF] text-[#5B3FD6] text-[10px] font-semibold px-1.5 py-0.5 rounded-md uppercase tracking-wider">
                 AI
               </span>
             </div>
-            <p className="text-[10px] font-medium text-charcoal-50 tracking-wide uppercase">Career Intelligence</p>
+            <p className="text-[10px] font-medium text-charcoal-50 tracking-wider uppercase">Career Intelligence</p>
           </div>
         </div>
 

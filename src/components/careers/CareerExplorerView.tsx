@@ -83,7 +83,7 @@ export const CareerExplorerView: React.FC = () => {
           return (
             <div
               key={career.id}
-              className={`bg-white rounded-3xl p-6 shadow-card hover:shadow-card-hover border transition-all duration-300 flex flex-col justify-between group ${
+              className={`bg-white rounded-2xl p-6 shadow-card hover:shadow-card-hover border transition-all duration-300 flex flex-col justify-between group ${
                 isCurrentTarget ? 'border-[#5B3FD6] ring-2 ring-[#F0ECFF]' : 'border-beige-200 hover:border-[#DDD5FF]'
               }`}
             >

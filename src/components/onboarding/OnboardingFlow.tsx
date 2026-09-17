@@ -194,7 +194,7 @@ export const OnboardingFlow: React.FC = () => {
         )}
 
         {/* Step Card Container */}
-        <div className="bg-white rounded-3xl p-6 sm:p-10 shadow-card border border-[#F0ECFF] relative">
+        <div className="bg-white rounded-2xl p-6 sm:p-10 shadow-card border border-beige-200 relative">
           {/* STEP 1: Student Profile */}
           {currentStep === 1 && (
             <div className="space-y-6">

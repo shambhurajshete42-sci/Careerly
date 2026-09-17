@@ -58,9 +58,9 @@ export const LandingPage: React.FC = () => {
               </div>
 
               {/* Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#292631] tracking-tight leading-[1.12]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#292631] tracking-tight leading-[1.12]">
                 Your Skills. <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5B3FD6] to-[#7B57FF]">
+                <span className="text-[#5B3FD6]">
                   Your Interests.
                 </span> <br />
                 Your Future.
@@ -75,15 +75,15 @@ export const LandingPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
                 <button
                   onClick={() => navigateTo('onboarding')}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-xl bg-[#5B3FD6] hover:bg-[#4E34BF] text-white font-bold text-sm sm:text-base shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-3 rounded-xl bg-[#5B3FD6] hover:bg-[#4E34BF] text-white font-semibold text-sm sm:text-base transition-colors"
                 >
                   <span>Discover My Career</span>
-                  <ArrowRight className="w-5 h-5 text-white" />
+                  <ArrowRight className="w-4 h-4 text-white" />
                 </button>
 
                 <button
                   onClick={() => navigateTo('career-goal-planner')}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-[#F0ECFF] text-[#5B3FD6] font-bold text-sm sm:text-base border border-[#DDD5FF] shadow-sm transition-all"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-[#F0ECFF] text-[#5B3FD6] font-semibold text-sm sm:text-base border border-beige-200 transition-colors"
                 >
                   <Target className="w-4 h-4 text-[#5B3FD6]" />
                   <span>Choose Career Goal</span>
@@ -109,7 +109,7 @@ export const LandingPage: React.FC = () => {
 
             {/* Right Hero Visual: Career Intelligence Flow */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="w-full max-w-md bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-purple-100/90 relative">
+              <div className="w-full max-w-md bg-white rounded-2xl p-6 shadow-card border border-beige-200 relative">
                 {/* Header tag */}
                 <div className="flex items-center justify-between pb-4 border-b border-purple-50">
                   <div className="flex items-center gap-2">
@@ -233,7 +233,7 @@ export const LandingPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section id="how-it-works" className="py-16 bg-white border-y border-purple-100/80">
+      <section id="how-it-works" className="py-16 bg-white border-y border-beige-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-xs font-bold text-brand-700 uppercase tracking-wider bg-brand-50 px-3 py-1 rounded-full border border-brand-200/60">
@@ -253,15 +253,15 @@ export const LandingPage: React.FC = () => {
               return (
                 <div
                   key={idx}
-                  className="p-6 rounded-2xl bg-lavender-50/40 border border-purple-100/80 hover:bg-white hover:border-brand-300 hover:shadow-card-hover transition-all duration-300 group"
+                  className="p-6 rounded-2xl bg-white border border-beige-200 hover:border-lavender-300 shadow-card transition-colors group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-brand-100 text-brand-800 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Icon className="w-6 h-6 text-brand-700" />
+                  <div className="w-11 h-11 rounded-xl bg-[#F0ECFF] text-[#5B3FD6] flex items-center justify-center mb-4 transition-transform group-hover:scale-105">
+                    <Icon className="w-5 h-5 text-[#5B3FD6]" />
                   </div>
-                  <h3 className="text-base font-bold text-slate-900 mb-2 group-hover:text-brand-900 transition-colors">
+                  <h3 className="text-base font-bold text-[#292631] mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-charcoal-100 leading-relaxed">
                     {benefit.description}
                   </p>
                 </div>
@@ -272,7 +272,7 @@ export const LandingPage: React.FC = () => {
       </section>
 
       {/* Interactive Teaser Banner */}
-      <section className="py-14 my-8 mx-4 sm:mx-8 rounded-3xl bg-[#5B3FD6] text-white relative overflow-hidden shadow-card">
+      <section className="py-14 my-8 mx-4 sm:mx-8 rounded-2xl bg-[#5B3FD6] text-white relative overflow-hidden shadow-card">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-5">
           <span className="text-xs font-semibold px-3 py-1 rounded-full bg-white/15 text-purple-100 border border-white/20">
             Student Career Guidance
@@ -286,7 +286,7 @@ export const LandingPage: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <button
               onClick={() => navigateTo('onboarding')}
-              className="px-7 py-3 rounded-xl bg-white text-[#5B3FD6] font-bold text-sm shadow-md hover:bg-purple-50 transition-all hover:scale-105 active:scale-95"
+              className="px-6 py-2.5 rounded-xl bg-white text-[#5B3FD6] font-semibold text-sm hover:bg-[#F0ECFF] transition-colors"
             >
               Start 5-Step Assessment
             </button>

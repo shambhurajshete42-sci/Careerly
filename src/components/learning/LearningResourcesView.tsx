@@ -40,10 +40,10 @@ export const LearningResourcesView: React.FC = () => {
   return (
     <div className="space-y-8 pb-14">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-beige-200">
         <div>
           <div className="flex items-center gap-2">
-            <h1 className="text-2xl sm:text-3xl font-black text-[#292631] tracking-tight">
+            <h1 className="text-2xl sm:text-3xl font-bold text-[#292631] tracking-tight">
               Learning Library
             </h1>
             <Badge variant="purple" size="sm">Skill Gap Connected</Badge>
@@ -61,7 +61,7 @@ export const LearningResourcesView: React.FC = () => {
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
             placeholder="Search skills, topics..."
-            className="w-full pl-9 pr-4 py-2 rounded-xl border border-slate-200 bg-white text-xs font-medium text-[#292631] placeholder-slate-400 focus:outline-none focus:border-[#5B3FD6] focus:ring-2 focus:ring-[#F0ECFF]"
+            className="w-full pl-9 pr-4 py-2 rounded-xl border border-beige-200 bg-white text-xs font-medium text-[#292631] placeholder-slate-400 focus:outline-none focus:border-[#5B3FD6] focus:ring-2 focus:ring-[#F0ECFF]"
           />
         </div>
       </div>
@@ -85,7 +85,7 @@ export const LearningResourcesView: React.FC = () => {
             className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${
               selectedCategory === cat
                 ? 'bg-[#5B3FD6] text-white shadow-xs'
-                : 'bg-white text-[#292631] border border-slate-200 hover:bg-[#F0ECFF]'
+                : 'bg-white text-[#292631] border border-beige-200 hover:bg-[#F0ECFF]'
             }`}
           >
             {cat}
@@ -99,7 +99,7 @@ export const LearningResourcesView: React.FC = () => {
           return (
             <div
               key={res.id}
-              className="bg-white rounded-3xl p-6 shadow-card border border-slate-200 hover:border-[#5B3FD6]/40 hover:shadow-card-hover transition-all flex flex-col justify-between group"
+              className="bg-white rounded-2xl p-6 shadow-card border border-beige-200 hover:border-[#5B3FD6]/40 hover:shadow-card-hover transition-all flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-start justify-between gap-2 mb-2">
@@ -151,7 +151,7 @@ export const LearningResourcesView: React.FC = () => {
                   className={`px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-all ${
                     res.saved 
                       ? 'bg-[#E4F3EA] text-[#292631] border border-[#6FAF8B]' 
-                      : 'bg-slate-50 hover:bg-[#F0ECFF] text-[#292631] border border-slate-200'
+                      : 'bg-slate-50 hover:bg-[#F0ECFF] text-[#292631] border border-beige-200'
                   }`}
                 >
                   {res.saved ? <BookmarkCheck className="w-3.5 h-3.5 text-[#6FAF8B]" /> : <Plus className="w-3.5 h-3.5" />}

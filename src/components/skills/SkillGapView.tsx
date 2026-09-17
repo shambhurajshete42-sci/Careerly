@@ -44,10 +44,10 @@ export const SkillGapView: React.FC = () => {
   return (
     <div className="space-y-8 pb-14">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-beige-200">
         <div>
           <div className="flex items-center gap-2">
-            <h1 className="text-2xl sm:text-3xl font-black text-[#292631] tracking-tight">
+            <h1 className="text-2xl sm:text-3xl font-bold text-[#292631] tracking-tight">
               Your Skill Gap
             </h1>
             <span className="text-xs font-bold text-[#5B3FD6] bg-[#F0ECFF] px-2.5 py-0.5 rounded-full border border-[#5B3FD6]/30">
@@ -68,7 +68,7 @@ export const SkillGapView: React.FC = () => {
               className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${
                 activeTab === tab
                   ? 'bg-[#5B3FD6] text-white shadow-xs'
-                  : 'bg-white text-[#292631] border border-slate-200 hover:bg-[#F0ECFF] hover:text-[#5B3FD6]'
+                  : 'bg-white text-[#292631] border border-beige-200 hover:bg-[#F0ECFF] hover:text-[#5B3FD6]'
               }`}
             >
               {tab}
@@ -90,7 +90,7 @@ export const SkillGapView: React.FC = () => {
 
       {/* 3 Overview Metric Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-        <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-subtle flex items-center gap-4">
+        <div className="bg-white rounded-2xl p-5 border border-beige-200 shadow-subtle flex items-center gap-4">
           <div className="w-12 h-12 rounded-xl bg-[#F0ECFF] border border-[#5B3FD6]/20 text-[#5B3FD6] flex items-center justify-center font-bold text-lg">
             {prioritySkills.length}
           </div>
@@ -100,7 +100,7 @@ export const SkillGapView: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-subtle flex items-center gap-4">
+        <div className="bg-white rounded-2xl p-5 border border-beige-200 shadow-subtle flex items-center gap-4">
           <div className="w-12 h-12 rounded-xl bg-blue-50 border border-[#6C8CFF]/30 text-[#6C8CFF] flex items-center justify-center font-bold text-lg">
             {developingSkills.length}
           </div>
@@ -110,7 +110,7 @@ export const SkillGapView: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-slate-200 shadow-subtle flex items-center gap-4">
+        <div className="bg-white rounded-2xl p-5 border border-beige-200 shadow-subtle flex items-center gap-4">
           <div className="w-12 h-12 rounded-xl bg-[#E4F3EA] border border-[#6FAF8B]/30 text-[#6FAF8B] flex items-center justify-center font-bold text-lg">
             {strongSkills.length}
           </div>
@@ -130,8 +130,8 @@ export const SkillGapView: React.FC = () => {
           return (
             <div
               key={skill.name}
-              className={`bg-white rounded-3xl p-6 shadow-card border transition-all duration-300 flex flex-col md:flex-row md:items-center justify-between gap-6 ${
-                isPriority ? 'border-[#5B3FD6]/40 ring-1 ring-[#F0ECFF]' : 'border-slate-200'
+              className={`bg-white rounded-2xl p-6 shadow-card border transition-all duration-300 flex flex-col md:flex-row md:items-center justify-between gap-6 ${
+                isPriority ? 'border-[#5B3FD6]/40 ring-1 ring-[#F0ECFF]' : 'border-beige-200'
               }`}
             >
               {/* Skill Info */}

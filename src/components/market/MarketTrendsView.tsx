@@ -20,9 +20,9 @@ export const MarketTrendsView: React.FC = () => {
   return (
     <div className="space-y-8 pb-14">
       {/* Header */}
-      <div className="pb-4 border-b border-slate-200">
+      <div className="pb-4 border-b border-beige-200">
         <div className="flex items-center gap-2">
-          <h1 className="text-2xl sm:text-3xl font-black text-[#292631] tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-bold text-[#292631] tracking-tight">
             Market Intelligence
           </h1>
           <Badge variant="purple" size="sm">Real-Time Telemetry</Badge>
@@ -44,7 +44,7 @@ export const MarketTrendsView: React.FC = () => {
       {/* Two Column Visual: Trending Skills (Demand Bar Chart) vs Trending Roles */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left (6 cols): Trending Skills & Demand */}
-        <div className="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-slate-200 space-y-5">
+        <div className="lg:col-span-6 bg-white rounded-2xl p-6 sm:p-7 shadow-card border border-beige-200 space-y-5">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <BarChart3 className="w-5 h-5 text-[#5B3FD6]" />
@@ -91,7 +91,7 @@ export const MarketTrendsView: React.FC = () => {
         </div>
 
         {/* Right (6 cols): Trending Roles in 2026 */}
-        <div className="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-slate-200 space-y-5">
+        <div className="lg:col-span-6 bg-white rounded-2xl p-6 sm:p-7 shadow-card border border-beige-200 space-y-5">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Briefcase className="w-5 h-5 text-[#5B3FD6]" />
@@ -113,7 +113,7 @@ export const MarketTrendsView: React.FC = () => {
               return (
                 <div
                   key={role.title}
-                  className="p-4 rounded-2xl bg-white border border-slate-200 shadow-subtle hover:border-[#5B3FD6]/40 hover:shadow-card-hover transition-all space-y-2"
+                  className="p-4 rounded-2xl bg-white border border-beige-200 shadow-subtle hover:border-[#5B3FD6]/40 hover:shadow-card-hover transition-all space-y-2"
                 >
                   <div className="flex items-start justify-between">
                     <div>

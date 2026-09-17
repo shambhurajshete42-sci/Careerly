@@ -34,10 +34,10 @@ export const PersonalizedRoadmapView: React.FC = () => {
   return (
     <div className="space-y-8 pb-16">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-beige-200">
         <div>
           <div className="flex items-center gap-2">
-            <h1 className="text-2xl sm:text-3xl font-black text-[#292631] tracking-tight">
+            <h1 className="text-2xl sm:text-3xl font-bold text-[#292631] tracking-tight">
               Your AI Career Roadmap
             </h1>
             <span className="text-xs font-bold text-[#5B3FD6] bg-[#F0ECFF] px-2.5 py-0.5 rounded-full border border-[#5B3FD6]/30">
@@ -56,7 +56,7 @@ export const PersonalizedRoadmapView: React.FC = () => {
             className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
               viewMode === 'timeline'
                 ? 'bg-[#5B3FD6] text-white shadow-xs'
-                : 'bg-white text-[#292631] border border-slate-200 hover:bg-[#F0ECFF]'
+                : 'bg-white text-[#292631] border border-beige-200 hover:bg-[#F0ECFF]'
             }`}
           >
             Timeline View
@@ -66,7 +66,7 @@ export const PersonalizedRoadmapView: React.FC = () => {
             className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
               viewMode === 'cards'
                 ? 'bg-[#5B3FD6] text-white shadow-xs'
-                : 'bg-white text-[#292631] border border-slate-200 hover:bg-[#F0ECFF]'
+                : 'bg-white text-[#292631] border border-beige-200 hover:bg-[#F0ECFF]'
             }`}
           >
             Phase Cards
@@ -75,7 +75,7 @@ export const PersonalizedRoadmapView: React.FC = () => {
       </div>
 
       {/* Progress Summary Card */}
-      <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+      <div className="bg-white rounded-2xl p-6 sm:p-7 shadow-card border border-beige-200 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
         <div className="space-y-2">
           <div className="flex items-center gap-2">
             <Sparkles className="w-4 h-4 text-[#5B3FD6]" />
@@ -124,8 +124,8 @@ export const PersonalizedRoadmapView: React.FC = () => {
                 </div>
 
                 {/* Phase Card */}
-                <div className={`bg-white rounded-3xl p-6 sm:p-7 shadow-card border transition-all ${
-                  isInProgress ? 'border-[#5B3FD6] ring-2 ring-[#F0ECFF]' : 'border-slate-200'
+                <div className={`bg-white rounded-2xl p-6 sm:p-7 shadow-card border transition-all ${
+                  isInProgress ? 'border-[#5B3FD6] ring-2 ring-[#F0ECFF]' : 'border-beige-200'
                 }`}>
                   {/* Phase Header */}
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100">
@@ -182,7 +182,7 @@ export const PersonalizedRoadmapView: React.FC = () => {
                           className={`p-3 rounded-2xl border transition-all cursor-pointer flex items-center gap-3 text-xs ${
                             m.completed
                               ? 'bg-[#E4F3EA] border-[#6FAF8B]/40 text-[#292631] font-medium'
-                              : 'bg-slate-50/70 border-slate-200 text-[#292631] hover:bg-[#F0ECFF] hover:border-[#5B3FD6]/30'
+                              : 'bg-slate-50/70 border-beige-200 text-[#292631] hover:bg-[#F0ECFF] hover:border-[#5B3FD6]/30'
                           }`}
                         >
                           <div className={`w-5 h-5 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
@@ -231,8 +231,8 @@ export const PersonalizedRoadmapView: React.FC = () => {
             return (
               <div
                 key={phase.id}
-                className={`bg-white rounded-3xl p-6 shadow-card border flex flex-col justify-between ${
-                  isInProgress ? 'border-[#5B3FD6] ring-2 ring-[#F0ECFF]' : 'border-slate-200'
+                className={`bg-white rounded-2xl p-6 shadow-card border flex flex-col justify-between ${
+                  isInProgress ? 'border-[#5B3FD6] ring-2 ring-[#F0ECFF]' : 'border-beige-200'
                 }`}
               >
                 <div>

@@ -44,7 +44,7 @@ export const DashboardView: React.FC = () => {
       {/* Top Welcome Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-3 border-b border-beige-200">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-black text-[#292631] tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-bold text-[#292631] tracking-tight">
             Welcome back, {student.name.split(' ')[0]} 👋
           </h1>
           <p className="text-xs sm:text-sm text-charcoal-100 mt-1">
@@ -64,7 +64,7 @@ export const DashboardView: React.FC = () => {
       {/* CORE QUESTIONS 1 & 2: WHERE AM I NOW? & WHAT CAREER AM I PURSUING? */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* QUESTION 1: WHERE AM I NOW? -> CAREER READINESS (5 cols) */}
-        <div className="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-beige-200 flex flex-col justify-between">
+        <div className="lg:col-span-5 bg-white rounded-2xl p-6 shadow-card border border-beige-200 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-4">
               <span className="text-[10px] font-bold text-charcoal-50 uppercase tracking-wider">
@@ -108,7 +108,7 @@ export const DashboardView: React.FC = () => {
         </div>
 
         {/* QUESTION 2: WHAT CAREER AM I PURSUING? -> CURRENT CAREER GOAL (7 cols) */}
-        <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-beige-200 flex flex-col justify-between">
+        <div className="lg:col-span-7 bg-white rounded-2xl p-6 shadow-card border border-beige-200 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-3">
               <span className="text-[10px] font-bold text-charcoal-50 uppercase tracking-wider">
@@ -119,7 +119,7 @@ export const DashboardView: React.FC = () => {
               </span>
             </div>
 
-            <h2 className="text-2xl font-black text-[#292631] tracking-tight">
+            <h2 className="text-xl sm:text-2xl font-bold text-[#292631] tracking-tight">
               {activeTargetCareer.title}
             </h2>
 
@@ -162,7 +162,7 @@ export const DashboardView: React.FC = () => {
       {/* CORE QUESTIONS 3 & 4: WHAT SHOULD I WORK ON? & WHAT SHOULD I DO NEXT? */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* QUESTION 3: WHAT SHOULD I WORK ON? -> TOP SKILL GAPS (6 cols) */}
-        <div className="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-beige-200 flex flex-col justify-between">
+        <div className="lg:col-span-6 bg-white rounded-2xl p-6 shadow-card border border-beige-200 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-2">
               <span className="text-[10px] font-bold text-charcoal-50 uppercase tracking-wider">
@@ -226,7 +226,7 @@ export const DashboardView: React.FC = () => {
         </div>
 
         {/* QUESTION 4: WHAT SHOULD I DO NEXT? -> NEXT ROADMAP STEP (6 cols) */}
-        <div className="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-beige-200 flex flex-col justify-between">
+        <div className="lg:col-span-6 bg-white rounded-2xl p-6 shadow-card border border-beige-200 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-2">
               <span className="text-[10px] font-bold text-charcoal-50 uppercase tracking-wider">
@@ -274,7 +274,7 @@ export const DashboardView: React.FC = () => {
       </div>
 
       {/* SUPPORTING DISCOVERY SECTION: Alternative Careers */}
-      <div className="p-5 rounded-3xl bg-white border border-beige-200 shadow-subtle flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="p-5 rounded-2xl bg-white border border-beige-200 shadow-card flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-[#F0ECFF] text-[#5B3FD6] flex items-center justify-center shrink-0">
             <Compass className="w-5 h-5 text-[#5B3FD6]" />

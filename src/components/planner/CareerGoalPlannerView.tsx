@@ -154,7 +154,7 @@ export const CareerGoalPlannerView: React.FC = () => {
     return (
       <div className="space-y-8 pb-16">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-purple-100/60">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-beige-200/60">
           <div>
             <div className="flex items-center gap-2 mb-1">
               <span className="p-2 rounded-xl bg-brand-50 text-brand-800 border border-brand-200/60">
@@ -184,7 +184,7 @@ export const CareerGoalPlannerView: React.FC = () => {
         </div>
 
         {/* Informative Banner */}
-        <div className="p-5 sm:p-6 rounded-3xl bg-[#F0ECFF] border border-[#DDD5FF] shadow-sm relative overflow-hidden">
+        <div className="p-5 sm:p-6 rounded-2xl bg-[#F0ECFF] border border-[#DDD5FF] shadow-sm relative overflow-hidden">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="max-w-xl">
               <span className="text-[10px] uppercase tracking-widest font-bold text-[#5B3FD6] bg-white px-2.5 py-1 rounded-full border border-[#DDD5FF] inline-block mb-1.5">
@@ -221,7 +221,7 @@ export const CareerGoalPlannerView: React.FC = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search for a career..."
-                className="w-full pl-11 pr-4 py-3 bg-white border border-purple-100 rounded-2xl text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 shadow-sm transition-all"
+                className="w-full pl-11 pr-4 py-3 bg-white border border-beige-200 rounded-2xl text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 shadow-sm transition-all"
               />
               {searchQuery && (
                 <button
@@ -243,7 +243,7 @@ export const CareerGoalPlannerView: React.FC = () => {
                 className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${
                   selectedCategory === cat
                     ? 'bg-brand-800 text-white shadow-sm shadow-brand-900/10'
-                    : 'bg-white text-slate-600 border border-purple-100/80 hover:bg-lavender-50'
+                    : 'bg-white text-slate-600 border border-beige-200/80 hover:bg-lavender-50'
                 }`}
               >
                 {cat}
@@ -269,15 +269,15 @@ export const CareerGoalPlannerView: React.FC = () => {
             return (
               <div
                 key={career.id}
-                className={`bg-white rounded-3xl p-6 sm:p-7 shadow-card hover:shadow-card-hover border transition-all duration-300 flex flex-col justify-between relative group ${
-                  isTarget ? 'border-brand-500 ring-2 ring-purple-100' : 'border-purple-100 hover:border-brand-300'
+                className={`bg-white rounded-2xl p-6 sm:p-7 shadow-card hover:shadow-card-hover border transition-all duration-300 flex flex-col justify-between relative group ${
+                  isTarget ? 'border-brand-500 ring-2 ring-purple-100' : 'border-beige-200 hover:border-brand-300'
                 }`}
               >
                 <div>
                   {/* Top Bar: Icon + Category + Target Pill */}
                   <div className="flex items-start justify-between gap-3 mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-2xl bg-lavender-50 border border-purple-100 text-brand-800 flex items-center justify-center shadow-subtle group-hover:scale-105 group-hover:bg-brand-800 group-hover:text-white transition-all">
+                      <div className="w-12 h-12 rounded-2xl bg-lavender-50 border border-beige-200 text-brand-800 flex items-center justify-center shadow-subtle group-hover:scale-105 group-hover:bg-brand-800 group-hover:text-white transition-all">
                         {getCareerIcon(career.iconName, "w-6 h-6")}
                       </div>
                       <div>
@@ -363,7 +363,7 @@ export const CareerGoalPlannerView: React.FC = () => {
 
         {/* Empty state */}
         {filteredCareers.length === 0 && (
-          <div className="text-center py-16 bg-white rounded-3xl border border-purple-100 p-8">
+          <div className="text-center py-16 bg-white rounded-2xl border border-beige-200 p-8">
             <div className="w-12 h-12 rounded-2xl bg-lavender-50 text-brand-700 flex items-center justify-center mx-auto mb-3">
               <Search className="w-6 h-6" />
             </div>
@@ -383,7 +383,7 @@ export const CareerGoalPlannerView: React.FC = () => {
         {/* Local Analysis Animation Modal */}
         {isAnalyzing && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal/40 backdrop-blur-sm">
-            <div className="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl border border-brand-100 text-center space-y-5">
+            <div className="bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl border border-brand-100 text-center space-y-5">
               <div className="w-16 h-16 rounded-2xl bg-[#F0ECFF] text-[#5B3FD6] flex items-center justify-center mx-auto shadow-sm">
                 {analysisStepIndex === 4 ? (
                   <CheckCircle2 className="w-8 h-8 text-sage-600" />
@@ -439,7 +439,7 @@ export const CareerGoalPlannerView: React.FC = () => {
   return (
     <div className="space-y-8 pb-16">
       {/* Top Bar Navigation */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-3 border-b border-purple-100/60">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-3 border-b border-beige-200/60">
         <button
           onClick={() => {
             setActiveMode('select');
@@ -488,7 +488,7 @@ export const CareerGoalPlannerView: React.FC = () => {
       </div>
 
       {/* Main Hero Header Card (Step 3) */}
-      <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-card border border-purple-100 relative overflow-hidden">
+      <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-card border border-beige-200 relative overflow-hidden">
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
           <div className="space-y-3 max-w-3xl">
             <div className="flex items-center gap-2">
@@ -501,7 +501,7 @@ export const CareerGoalPlannerView: React.FC = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-2xl bg-lavender-50 border border-purple-100 text-brand-800 flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 rounded-2xl bg-lavender-50 border border-beige-200 text-brand-800 flex items-center justify-center shrink-0">
                 {getCareerIcon(currentCareerGoal.iconName, "w-6 h-6")}
               </div>
               <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -519,7 +519,7 @@ export const CareerGoalPlannerView: React.FC = () => {
           </div>
 
           {/* Quick Metrics Pill */}
-          <div className="bg-lavender-50/70 border border-purple-100 rounded-2xl p-4 shrink-0 space-y-2 text-xs w-full lg:w-64">
+          <div className="bg-lavender-50/70 border border-beige-200 rounded-2xl p-4 shrink-0 space-y-2 text-xs w-full lg:w-64">
             <div className="flex justify-between items-center">
               <span className="text-slate-500 font-medium">Indicative salary range:</span>
               <span className="font-bold text-slate-900">{currentCareerGoal.salaryRange.split('/')[0]}</span>
@@ -537,7 +537,7 @@ export const CareerGoalPlannerView: React.FC = () => {
       </div>
 
       {/* STEP 5: CAREER READINESS SUMMARY CARD */}
-      <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-purple-100 relative overflow-hidden">
+      <div className="bg-white rounded-2xl p-6 sm:p-7 shadow-card border border-beige-200 relative overflow-hidden">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
           {/* Left: Score & Description */}
           <div className="space-y-2 max-w-md">
@@ -616,8 +616,8 @@ export const CareerGoalPlannerView: React.FC = () => {
       </div>
 
       {/* STEP 4: PERSONALIZED SKILL READINESS (CURRENT vs TARGET) */}
-      <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-purple-100 space-y-6">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-purple-100/60">
+      <div className="bg-white rounded-2xl p-6 sm:p-7 shadow-card border border-beige-200 space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-beige-200/60">
           <div>
             <h2 className="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2">
               <SplitSquareVertical className="w-5 h-5 text-brand-700" />
@@ -647,7 +647,7 @@ export const CareerGoalPlannerView: React.FC = () => {
         </div>
 
         {/* Informative Supportive Guidance Note */}
-        <div className="p-3.5 rounded-2xl bg-lavender-50/70 border border-purple-100 text-xs text-slate-600 flex items-center justify-between">
+        <div className="p-3.5 rounded-2xl bg-lavender-50/70 border border-beige-200 text-xs text-slate-600 flex items-center justify-between">
           <span>
             💡 <strong>Guidance:</strong> Every professional builds skills incrementally. Focus first on your <strong>Priority areas</strong>, then polish developing areas into strong foundations.
           </span>
@@ -760,7 +760,7 @@ export const CareerGoalPlannerView: React.FC = () => {
       </div>
 
       {/* STEP 6: WHAT SHOULD I DO NEXT? ("Your Next Steps") */}
-      <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-purple-100 space-y-6">
+      <div className="bg-white rounded-2xl p-6 sm:p-7 shadow-card border border-beige-200 space-y-6">
         <div>
           <div className="flex items-center gap-2">
             <span className="p-1.5 rounded-lg bg-brand-50 text-brand-800 border border-brand-200/60">
@@ -779,7 +779,7 @@ export const CareerGoalPlannerView: React.FC = () => {
           {currentCareerGoal.nextSteps.map((step) => (
             <div
               key={step.stepNumber}
-              className="p-5 rounded-2xl bg-lavender-50/50 border border-purple-100 hover:border-brand-300 hover:bg-lavender-50 transition-all flex flex-col justify-between group"
+              className="p-5 rounded-2xl bg-lavender-50/50 border border-beige-200 hover:border-brand-300 hover:bg-lavender-50 transition-all flex flex-col justify-between group"
             >
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
@@ -817,7 +817,7 @@ export const CareerGoalPlannerView: React.FC = () => {
       {/* SECTION A & B: CORE SKILLS & TECHNICAL SKILLS */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* A. CORE SKILLS */}
-        <div className="bg-white rounded-3xl p-6 shadow-card border border-purple-100 space-y-4">
+        <div className="bg-white rounded-2xl p-6 shadow-card border border-beige-200 space-y-4">
           <div className="flex items-center gap-2 pb-2 border-b border-purple-50">
             <span className="text-xs font-black text-brand-700 bg-brand-50 px-2 py-0.5 rounded">A</span>
             <h3 className="text-base font-bold text-slate-900">Core Skills</h3>
@@ -836,7 +836,7 @@ export const CareerGoalPlannerView: React.FC = () => {
         </div>
 
         {/* B. TECHNICAL SKILLS */}
-        <div className="bg-white rounded-3xl p-6 shadow-card border border-purple-100 space-y-4">
+        <div className="bg-white rounded-2xl p-6 shadow-card border border-beige-200 space-y-4">
           <div className="flex items-center gap-2 pb-2 border-b border-purple-50">
             <span className="text-xs font-black text-brand-700 bg-brand-50 px-2 py-0.5 rounded">B</span>
             <h3 className="text-base font-bold text-slate-900">Technical Skills</h3>
@@ -858,7 +858,7 @@ export const CareerGoalPlannerView: React.FC = () => {
       {/* SECTION C & D: TOOLS & TECHNOLOGIES & SOFT SKILLS */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* C. TOOLS & TECHNOLOGIES */}
-        <div className="bg-white rounded-3xl p-6 shadow-card border border-purple-100 space-y-4">
+        <div className="bg-white rounded-2xl p-6 shadow-card border border-beige-200 space-y-4">
           <div className="flex items-center gap-2 pb-2 border-b border-purple-50">
             <span className="text-xs font-black text-brand-700 bg-brand-50 px-2 py-0.5 rounded">C</span>
             <h3 className="text-base font-bold text-slate-900">Tools &amp; Technologies</h3>
@@ -870,7 +870,7 @@ export const CareerGoalPlannerView: React.FC = () => {
             {currentCareerGoal.toolsAndTechnologies.map((tool) => (
               <span
                 key={tool}
-                className="px-3 py-1.5 rounded-xl bg-slate-50 border border-purple-100 text-xs font-semibold text-slate-800 hover:bg-lavender-50 transition-colors"
+                className="px-3 py-1.5 rounded-xl bg-slate-50 border border-beige-200 text-xs font-semibold text-slate-800 hover:bg-lavender-50 transition-colors"
               >
                 {tool}
               </span>
@@ -879,7 +879,7 @@ export const CareerGoalPlannerView: React.FC = () => {
         </div>
 
         {/* D. SOFT SKILLS */}
-        <div className="bg-white rounded-3xl p-6 shadow-card border border-purple-100 space-y-4">
+        <div className="bg-white rounded-2xl p-6 shadow-card border border-beige-200 space-y-4">
           <div className="flex items-center gap-2 pb-2 border-b border-purple-50">
             <span className="text-xs font-black text-brand-700 bg-brand-50 px-2 py-0.5 rounded">D</span>
             <h3 className="text-base font-bold text-slate-900">Soft Skills &amp; Mindset</h3>
@@ -899,7 +899,7 @@ export const CareerGoalPlannerView: React.FC = () => {
       </div>
 
       {/* SECTION E: EDUCATION & KNOWLEDGE */}
-      <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-purple-100 space-y-4">
+      <div className="bg-white rounded-2xl p-6 sm:p-7 shadow-card border border-beige-200 space-y-4">
         <div className="flex items-center gap-2 pb-2 border-b border-purple-50">
           <span className="text-xs font-black text-brand-700 bg-brand-50 px-2 py-0.5 rounded">E</span>
           <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
@@ -937,7 +937,7 @@ export const CareerGoalPlannerView: React.FC = () => {
       </div>
 
       {/* SECTION F: EXPERIENCE */}
-      <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-purple-100 space-y-4">
+      <div className="bg-white rounded-2xl p-6 sm:p-7 shadow-card border border-beige-200 space-y-4">
         <div className="flex items-center gap-2 pb-2 border-b border-purple-50">
           <span className="text-xs font-black text-brand-700 bg-brand-50 px-2 py-0.5 rounded">F</span>
           <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
@@ -950,7 +950,7 @@ export const CareerGoalPlannerView: React.FC = () => {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-1">
           {currentCareerGoal.experience.map((exp, idx) => (
-            <div key={idx} className="p-4 rounded-2xl bg-lavender-50/40 border border-purple-100 text-xs text-slate-700 font-medium flex items-start gap-2.5">
+            <div key={idx} className="p-4 rounded-2xl bg-lavender-50/40 border border-beige-200 text-xs text-slate-700 font-medium flex items-start gap-2.5">
               <Sparkles className="w-4 h-4 text-brand-600 shrink-0 mt-0.5" />
               <span>{exp}</span>
             </div>
@@ -959,7 +959,7 @@ export const CareerGoalPlannerView: React.FC = () => {
       </div>
 
       {/* SECTION G: PORTFOLIO PROJECTS */}
-      <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-purple-100 space-y-5">
+      <div className="bg-white rounded-2xl p-6 sm:p-7 shadow-card border border-beige-200 space-y-5">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-purple-50">
           <div className="flex items-center gap-2">
             <span className="text-xs font-black text-brand-700 bg-brand-50 px-2 py-0.5 rounded">G</span>
@@ -1015,7 +1015,7 @@ export const CareerGoalPlannerView: React.FC = () => {
       </div>
 
       {/* SECTION H: OPTIONAL CERTIFICATIONS */}
-      <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-purple-100 space-y-4">
+      <div className="bg-white rounded-2xl p-6 sm:p-7 shadow-card border border-beige-200 space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-purple-50">
           <div className="flex items-center gap-2">
             <span className="text-xs font-black text-brand-700 bg-brand-50 px-2 py-0.5 rounded">H</span>
@@ -1035,7 +1035,7 @@ export const CareerGoalPlannerView: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-1">
           {currentCareerGoal.optionalCertifications.map((cert, idx) => (
-            <div key={idx} className="p-4 rounded-2xl bg-lavender-50/40 border border-purple-100 flex flex-col justify-between">
+            <div key={idx} className="p-4 rounded-2xl bg-lavender-50/40 border border-beige-200 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-1.5">
                   <span className="text-[10px] font-bold text-brand-700 uppercase tracking-wider">
@@ -1058,7 +1058,7 @@ export const CareerGoalPlannerView: React.FC = () => {
       </div>
 
       {/* Bottom CTA Banner linking to Roadmap & Skill Gap */}
-      <div className="p-6 sm:p-8 rounded-3xl bg-[#5B3FD6] text-white flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-card">
+      <div className="p-6 sm:p-8 rounded-2xl bg-[#5B3FD6] text-white flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-card">
         <div className="space-y-1 max-w-xl">
           <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/15 text-purple-100 text-[11px] font-semibold border border-white/20 mb-1">
             <Sparkles className="w-3 h-3 text-purple-200" />

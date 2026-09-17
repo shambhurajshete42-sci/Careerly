@@ -62,7 +62,7 @@ export const CareerDetailView: React.FC = () => {
       </div>
 
       {/* Main Hero Header Card */}
-      <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-card border border-[#F0ECFF] relative overflow-hidden">
+      <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-card border border-beige-200 relative overflow-hidden">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           <div>
             <div className="flex items-center gap-2 mb-2">
@@ -119,7 +119,7 @@ export const CareerDetailView: React.FC = () => {
       </div>
 
       {/* Visual Skill Comparison: YOUR LEVEL vs TARGET LEVEL */}
-      <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-card border border-beige-200 space-y-6">
+      <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-card border border-beige-200 space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
             <h2 className="text-xl font-bold text-[#292631]">
@@ -189,7 +189,7 @@ export const CareerDetailView: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left (8 cols): Overview & Market Outlook */}
         <div className="lg:col-span-8 space-y-6">
-          <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-beige-200 space-y-3">
+          <div className="bg-white rounded-2xl p-6 sm:p-7 shadow-card border border-beige-200 space-y-3">
             <h3 className="text-base font-bold text-[#292631]">
               Role Overview &amp; Day-to-Day
             </h3>
@@ -198,7 +198,7 @@ export const CareerDetailView: React.FC = () => {
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-card border border-beige-200 space-y-3">
+          <div className="bg-white rounded-2xl p-6 sm:p-7 shadow-card border border-beige-200 space-y-3">
             <div className="flex items-center gap-2 text-[#5B3FD6]">
               <TrendingUp className="w-5 h-5 text-[#5B3FD6]" />
               <h3 className="text-base font-bold text-[#292631]">
@@ -213,7 +213,7 @@ export const CareerDetailView: React.FC = () => {
 
         {/* Right (4 cols): Compact Related Roles & Action Plan */}
         <div className="lg:col-span-4 space-y-6">
-          <div className="bg-white rounded-3xl p-6 shadow-card border border-beige-200 space-y-3">
+          <div className="bg-white rounded-2xl p-6 shadow-card border border-beige-200 space-y-3">
             <div className="flex items-center gap-2">
               <Briefcase className="w-4 h-4 text-[#5B3FD6]" />
               <h3 className="text-sm font-bold text-[#292631]">
@@ -225,7 +225,7 @@ export const CareerDetailView: React.FC = () => {
             </p>
           </div>
 
-          <div className="bg-[#5B3FD6] text-white rounded-3xl p-6 shadow-card space-y-3">
+          <div className="bg-[#5B3FD6] text-white rounded-2xl p-6 shadow-card space-y-3">
             <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-white/20 text-white">
               Action Plan
             </span>

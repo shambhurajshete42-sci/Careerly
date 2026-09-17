@@ -19,7 +19,7 @@ export const Badge: React.FC<BadgeProps> = ({
     green: 'bg-[#E4F3EA] text-[#36644B] border-[#CEE8D8]',
     gold: 'bg-amber-50 text-amber-800 border-amber-200/80',
     pink: 'bg-pink-50 text-pink-700 border-pink-200/80',
-    slate: 'bg-[#FAF7F0] text-[#292631] border-beige-300'
+    slate: 'bg-[#FAF7F0] text-[#292631] border-beige-200'
   };
 
   const sizeStyles = {
